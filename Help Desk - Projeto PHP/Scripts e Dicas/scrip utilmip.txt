@@ -1,0 +1,12 @@
+<?php
+$ip = $_SERVER['REMOTE_ADDR'];
+echo "seu IP é: $ip";
+?>
+
+
+*<!--#echo var="HTTP_REFERER" --> url de referencia
+<!--#echo var="REMOTE_ADDR" --> ip do visitante
+<!--#echo var="REQUEST_URI" --> url solicitada
+<!--#echo var="HTTP_HOST" --> nome do server
+<!--#echo var="HTTP_USER_AGENT" --> navegador do visitante
+<!--#echo var="REDIRECT_STATUS" --> redirecionar o codigo de status

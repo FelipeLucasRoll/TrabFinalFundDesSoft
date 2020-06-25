@@ -1,0 +1,10 @@
+/*
+$exec       = mysql_query("SELECT * FROM cadastros WHERE login='$login' OR email='$email'");
+
+$check_exec = mysql_num_rows($exec);
+
+
+
+if($check_exec == "1"){Echo "<script>alert('Login ou E-mail já existe !')</script><script>history.back(-1);</script>"; Exit; }
+
+*/

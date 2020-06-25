@@ -1,0 +1,97 @@
+<html>
+
+<head>
+<title>|| Help Desk 1.0 ||</title>
+</head>
+
+<body bgcolor="black">
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: collapse; border: 0px solid silver" bordercolor="#111111" width="500">
+    <tr>
+      <td width="50" height="50">&nbsp;</td>
+      <td height="50" width="420">&nbsp;</td>
+      <td width="50" height="50">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="50" height="205">&nbsp;</td>
+      <td width="420" height="205">
+<form name="form1" method="POST" action="login.php">
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="404" height="205" background="imagens/logoentrada.jpg">
+    <tr>
+      <td width="404">
+      <div align="center">
+        <center>
+          <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="404">
+            <tr>
+              <td width="114">&nbsp;</td>
+              <td width="161">&nbsp;</td>
+              <td width="129">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="114">&nbsp;</td>
+              <td width="161">&nbsp;</td>
+              <td width="129">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="114">&nbsp;</td>
+              <td width="161">&nbsp;</td>
+              <td width="129">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="114"><font face="verdana" size="1" color="silver">&nbsp;
+                </font>
+                <div align="center"><font color="silver" size="1" face="verdana"><b>&nbsp;&nbsp; &nbsp; &nbsp;USU&Aacute;RIO:</b></font></div>
+              </td>
+              <td width="161"><input type="text" name="login" size="20" id="login"></td>
+              <td width="129"><input type="submit" value="Entrar" name="entrar" id="entrar"></td>
+            </tr>
+            <tr>
+              <td width="114"><font face="verdana" size="1" color="silver">
+                <div align="center"><b> &nbsp;SENHA:</b></div>
+              </font></td>
+              <td width="161"><input type="password" name="senha" size="20" id="senha"></td>
+              <td width="129"><input type="reset" value="Limpar" name="limpar" id="limpar"></td>
+            </tr>
+            <tr>
+              <td width="114">&nbsp;</td>
+              <td width="161">&nbsp;</td>
+              <td width="129">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="114">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="114"><div align="center"><a href="cadastro.php">Cadastre-se</a></div></td>
+              <td width="161"><div align="center"><a href="lembrarsenha.php">Lembrar senha</a> </div></td>
+              <td width="129" colspan="3"><div align="center"><a href="sac.php">Fale Conosco </a></div></td>
+            </tr>
+          </table>
+        </center>
+      </div>      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+</form>
+      </td>
+      <td width="50" height="205">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="50" height="50">&nbsp;</td>
+      <td height="50" width="420"><div align="center"><font face="verdana" size="1" color="silver">&copy;</font> <font face="verdana" size="2" color="silver">2010 - Todos Direitos Reservados </font></div></td>
+      <td width="50" height="50">&nbsp;</td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</body>
+
+</html>
+
