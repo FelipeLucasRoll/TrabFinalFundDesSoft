@@ -18,6 +18,12 @@ public class Chamado {
 
 	private Date datetime;
 
+	public Chamado(String s) {
+
+		this.status = s;
+
+	}
+
 	public int getIdCliente() {
 		return 0;
 	}
@@ -26,7 +32,8 @@ public class Chamado {
 		return 0;
 	}
 
-	public void getStatus() {
+	public String getStatus() {
+		return status;
 
 	}
 
