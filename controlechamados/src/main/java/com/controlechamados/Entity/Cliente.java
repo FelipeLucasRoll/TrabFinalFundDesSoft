@@ -20,6 +20,24 @@ public class Cliente {
 
 	private String plano;
 
+
+
+
+	public Cliente(int idcliente, String nome, String cpf, String datanasc, String telefone, String email, String login, String senha, String plano) {
+		this.idcliente = idcliente;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.datanasc = datanasc;
+		this.telefone = telefone;
+		this.email = email;
+		this.login = login;
+		this.senha = senha;
+		this.plano = plano;
+	}
+
+
+
+
 	public String getNome() {
 		return null;
 	}

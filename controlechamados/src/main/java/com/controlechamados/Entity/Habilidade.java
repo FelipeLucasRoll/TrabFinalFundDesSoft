@@ -10,6 +10,19 @@ public class Habilidade {
 
 	private boolean manager;
 
+
+
+
+	public Habilidade(int idhabilidade, String nome, char tipoHS, boolean manager) {
+		this.idhabilidade = idhabilidade;
+		this.nome = nome;
+		this.tipoHS = tipoHS;
+		this.manager = manager;
+	}
+
+
+
+
 	public String getNome() {
 		return null;
 	}
