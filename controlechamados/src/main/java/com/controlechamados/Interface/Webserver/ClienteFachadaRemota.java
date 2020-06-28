@@ -1,6 +1,6 @@
-package INTERFACE.WEBSERVER;
+package com.controlechamados.Interface.Webserver;
 
-import CASOS DE USO.SERVIÇOS.ServicosCliente;
+import com.controlechamados.UseCases.Services.ServicosCliente;
 
 public class ClienteFachadaRemota {
 

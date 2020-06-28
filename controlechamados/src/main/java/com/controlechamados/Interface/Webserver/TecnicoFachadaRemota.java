@@ -1,6 +1,6 @@
-package INTERFACE.WEBSERVER;
+package com.controlechamados.Interface.Webserver;
 
-import CASOS DE USO.SERVIÇOS.ServicosTecnico;
+import com.controlechamados.UseCases.Services.ServicosTecnico;
 
 public class TecnicoFachadaRemota {
 

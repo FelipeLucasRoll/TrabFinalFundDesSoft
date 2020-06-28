@@ -1,4 +1,6 @@
-package ENTIDADES;
+package com.controlechamados.Entity;
+import java.util.Date;
+import java.util.List;
 
 public class Chamado {
 
@@ -14,7 +16,7 @@ public class Chamado {
 
 	private String descricao;
 
-	private DateTime datetime;
+	private Date datetime;
 
 	public int getIdCliente() {
 		return 0;

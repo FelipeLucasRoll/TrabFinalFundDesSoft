@@ -1,6 +1,7 @@
-package CASOS DE USO.SERVIÇOS;
+package com.controlechamados.UseCases.Services;
 
-import ENTIDADES.Chamado;
+import java.util.List;
+import com.controlechamados.Entity.Chamado;
 
 public class ServicosCliente {
 

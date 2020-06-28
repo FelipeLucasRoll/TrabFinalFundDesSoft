@@ -1,4 +1,4 @@
-package ENTIDADES;
+package com.controlechamados.Entity;
 
 public class Habilidade {
 

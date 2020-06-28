@@ -1,4 +1,6 @@
-package INTERFACE.WEBSERVER;
+package com.controlechamados.Interface.Webserver;
+
+import java.util.Date;
 
 public class DadosChamadoCli {
 
@@ -6,6 +8,6 @@ public class DadosChamadoCli {
 
 	private String status;
 
-	private DateTime previsaoAtend;
+	private Date previsaoAtend;
 
 }

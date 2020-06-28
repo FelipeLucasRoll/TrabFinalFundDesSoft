@@ -1,4 +1,4 @@
-package INTERFACE.WEBSERVER;
+package com.controlechamados.Interface.Webserver;
 
 public class DadosAvaliacaoCli {
 

@@ -1,4 +1,6 @@
-package INTERFACE.WEBSERVER;
+package com.controlechamados.Interface.Webserver;
+
+import java.util.Date;
 
 public class DadosChamadoTec {
 
@@ -8,6 +10,6 @@ public class DadosChamadoTec {
 
 	private String descricao;
 
-	private DateTime previsao;
+	private Date previsao;
 
 }
