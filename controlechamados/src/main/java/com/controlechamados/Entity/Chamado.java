@@ -38,7 +38,7 @@ public class Chamado {
 		return null;
 	}
 
-	public DateTime getDateTime() {
+	public Date getDateTime() {
 		return null;
 	}
 
