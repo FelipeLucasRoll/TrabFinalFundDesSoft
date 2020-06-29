@@ -3,58 +3,58 @@ import java.util.Date;
 import java.util.List;
 
 public class Chamado {
-
-
 	private int idchamado;
-
 	private Cliente cliente;
-
 	private int idcliente;
-
 	private int idtecnico;
-
 	private String status;
-
-	private List<Habilidade> habilidades;
-
+	private Habilidade habilidade;
 	private String descricao;
-
 	private Date horaAbertura;
-
 	private Date horaFechamento;
-
 	private Date prazoLimite;
-
 	private int prioridade;
 
+	public static class Builder{
+		private int idchamado = 0;
+		private Cliente cliente = null;
+		private int idcliente = 0;
+		private int idtecnico = 0;
+		private String status = "";
+		private Habilidade habilidade = null;
+		private String descricao = "";
+		private Date horaAbertura = null;
+		private Date horaFechamento = null;
+		private Date prazoLimite = null;
+		private int prioridade = 0;
+		
+		public Builder(){
+		}
+	
+		public Builder chamado(int idchamado){
+			this.idchamado = idchamado;
+			return this;
+		}
+	
+		public Chamado build(){
+			return new Chamado(this);
+		}
 
+	}	
 
-
-	public Chamado(int idchamado, Cliente cliente, int idcliente, int idtecnico, String status, List<Habilidade> habilidades, String descricao, Date horaAbertura, Date horaFechamento, Date prazoLimite) {
-		this.idchamado = idchamado;
-		this.cliente = cliente;
-		this.idcliente = idcliente;
-		this.idtecnico = idtecnico;
-		this.status = status;
-		this.habilidades = habilidades;
-		this.descricao = descricao;
-		this.horaAbertura = horaAbertura;
-		this.horaFechamento = horaFechamento;
-		this.prazoLimite = prazoLimite;
+	private Chamado(Builder builder) {
+		this.idchamado = builder.idchamado;
+		this.cliente = builder.cliente;
+		this.idcliente = builder.idcliente;
+		this.idtecnico = builder.idtecnico;
+		this.status = builder.status;
+		this.habilidade = builder.habilidade;
+		this.descricao = builder.descricao;
+		this.horaAbertura = builder.horaAbertura;
+		this.horaFechamento = builder.horaFechamento;
+		this.prazoLimite = builder.prazoLimite;
 	}
 	
-
-
-
-	public Chamado(String s) {
-
-		this.status = s;
-
-	}
-
-
-
-
 	public int getIdchamado() {
 		return this.idchamado;
 	}
@@ -95,12 +95,12 @@ public class Chamado {
 		this.status = status;
 	}
 
-	public List<Habilidade> getHabilidades() {
-		return this.habilidades;
+	public Habilidade getHabilidade() {
+		return this.habilidade;
 	}
 
 	public void setHabilidades(List<Habilidade> habilidades) {
-		this.habilidades = habilidades;
+		this.habilidade = habilidade;
 	}
 
 	public String getDescricao() {
