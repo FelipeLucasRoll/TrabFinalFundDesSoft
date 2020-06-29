@@ -15,7 +15,6 @@ public void setup(){
 
     c = new Chamado("ok");
 
-
 }
 
 
