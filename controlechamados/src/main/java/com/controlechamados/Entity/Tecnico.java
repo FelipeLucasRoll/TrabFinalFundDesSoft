@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Tecnico {
 
+
 	private int idtecnico;
 
 	private String nome;
@@ -16,6 +17,20 @@ public class Tecnico {
 	private List<Habilidade> habilidades;
 
 	private double avaliacao;
+
+
+
+	public Tecnico(int idtecnico, String nome, String cpf, String login, String senha, List<Habilidade> habilidades, double avaliacao) {
+		this.idtecnico = idtecnico;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.login = login;
+		this.senha = senha;
+		this.habilidades = habilidades;
+		this.avaliacao = avaliacao;
+	}
+
+
 
 	public String getNome() {
 		return null;
