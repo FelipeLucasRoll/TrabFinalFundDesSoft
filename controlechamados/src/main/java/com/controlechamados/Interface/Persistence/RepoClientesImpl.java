@@ -1,12 +1,14 @@
 package com.controlechamados.Interface.Persistence;
 
 import java.util.Map;
-public class RepoClientesImpl {
 
-	private Map<String,?> clientes;
+import com.controlechamados.Entity.Cliente;
 
-	public void listaClientesImpl() {
+import org.springframework.data.repository.CrudRepository;
 
-	}
+public interface RepoClientesImpl extends CrudRepository<String,Cliente> {
+    
+     Map<String,Cliente> Clientes (int idcliente);
+     Map<String,Cliente>findall();
 
 }
