@@ -17,22 +17,25 @@ public class Chamado {
 
 	private String descricao;
 
-	private Date datetime;
+	private Date horaAbertura;
+
+	private Date horaFechamento;
+
+	private Date prazoLimite;
 
 
-	public Chamado(int idchamado, int idcliente, int idtecnico, String status, List<Habilidade> habilidades, String descricao, Date datetime) {
+
+	public Chamado(int idchamado, int idcliente, int idtecnico, String status, List<Habilidade> habilidades, String descricao, Date horaAbertura, Date horaFechamento, Date prazoLimite) {
 		this.idchamado = idchamado;
 		this.idcliente = idcliente;
 		this.idtecnico = idtecnico;
 		this.status = status;
 		this.habilidades = habilidades;
 		this.descricao = descricao;
-		this.datetime = datetime;
+		this.horaAbertura = horaAbertura;
+		this.horaFechamento = horaFechamento;
+		this.prazoLimite = prazoLimite;
 	}
-
-
-	
-
 
 
 

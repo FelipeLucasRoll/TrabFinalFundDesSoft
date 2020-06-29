@@ -1,13 +1,17 @@
 package com.controlechamados.UseCases.Policies ;
 
-import java.util.List;
 import com.controlechamados.Entity.Chamado;
 
-public class CalculadorSLA1 implements CalculadorSLA{
+public class CalculadorSLA1 extends SuperCalculadorSLA {
 
-	@Override
-	public List<Chamado> organizaChamados(Chamado chamado) {
-		return null;
+
+
+	public Chamado organizaChamados(Chamado chamado) {
+		return chamado;
 	}
+
+
+
+
 
 }
