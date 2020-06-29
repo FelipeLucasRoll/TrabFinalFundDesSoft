@@ -1,6 +1,5 @@
 package com.controlechamados.UseCases.Policies;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -9,8 +8,13 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class SuperCalculadorSLA implements InterfaceCalculaSLA{
 
+
+    public SuperCalculadorSLA(Date data) {
+        this.data = data;
+    }
+
+
     Date data = new Date();
-    SimpleDateFormat dateFormat = new SimpleDateFormat( "yyyy-MM-dd" );
 
     @Override
     public Date addDias(int dias){

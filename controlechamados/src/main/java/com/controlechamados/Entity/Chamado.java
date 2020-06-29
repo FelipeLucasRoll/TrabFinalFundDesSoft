@@ -25,6 +25,8 @@ public class Chamado {
 
 	private Date prazoLimite;
 
+	private int prioridade;
+
 
 
 
@@ -133,5 +135,13 @@ public class Chamado {
 		this.prazoLimite = prazoLimite;
 	}
 	
+	public int getPrioridade() {
+		return this.prioridade;
+	}
+
+	public void setPrioridade(int prioridade) {
+		this.prioridade = prioridade;
+	}
+
 
 }
