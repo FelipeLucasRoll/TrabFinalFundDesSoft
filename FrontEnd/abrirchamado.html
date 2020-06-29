@@ -39,7 +39,7 @@ textarea			{font-family: verdana; font-size: 10px; background-color: #F2F2F2; bo
 }
 form				{font-family: verdana; font-size: 10px
 }
-htmlarea			{font-family: verdana; font-size: 10px, 12pt; bgcolor="#e8e8e8"; scrollbar-face-color: #e9e9e9; scrollbar-shadow-color: #808080;scrollbar-highlight-color:#ffffff;scrollbar-3dlight-color: #808080;scrollbar-darkshadow-color:#ffffff;scrollbar-track-color:#dbdbdb;scrollbar-arrow-color:#336699
+htmlarea			{font-family: verdana; font-size: 10px, 12pt; background-color:#e8e8e8; scrollbar-face-color: #e9e9e9; scrollbar-shadow-color: #808080;scrollbar-highlight-color:#ffffff;scrollbar-3dlight-color: #808080;scrollbar-darkshadow-color:#ffffff;scrollbar-track-color:#dbdbdb;scrollbar-arrow-color:#336699
 }
 select				{font-family: verdana; font-size: 10px; border: 1px solid #E0E0E0; color: #504c50;
 }
@@ -57,18 +57,13 @@ body,td,th {
 .style28 {font-size: 20px}
 -->
 </style><body>
-<form action="chamadoaberto.php" method="post" name="form3" id="form3">
+<form action="" method="post" name="form3" id="form3">
   <p align="center" class="style2 style28">:: Abertura de Chamado::<br>
-  Sistema Help Desk </p>
+  Sistema de Gestão de Chamados </p>
   <div align="left">
     <table width="500px" border="1" cellspacing="4" align="center">
       <tr>
         <td><div align="center" size="1" color="silver">
-            <blockquote>
-              <blockquote>
-                <p><font color="#FF0000">&raquo;</font>&nbsp;Se os dados estiverem incorretos <a href="editarperfil.php">clique aqui</a> &nbsp;<font color="#FF0000">&laquo;</font></p>
-              </blockquote>
-            </blockquote>
           </div>
           <table width="374" border="0" align="center" cellpadding="7" cellspacing="" >
 		  <tr>
@@ -89,19 +84,44 @@ body,td,th {
               <input name="celular"  readonly="readonly" type="text" id="celular" size="38" value="<?php echo $celular ?>" />
             </span></td>
           </tr>
-          
-		  <tr>
+          <tr>
             <td><span class="style1">Assunto:</span></td>
 			<td>
 			<select class="campos" name="assunto">
-			<option value="Selecione uma op&ccedil;&atilde;o" selected>Selecione uma op&ccedil;&atilde;o</option>
-			<option value="Hardware">Hardware (pe&ccedil;as)</option>
-			<option value="Software">Software (programas)</option>
-			<option value="Outros">Outros</option>
+			<option value="op" selected>Selecione uma op&ccedil;&atilde;o</option>
+			<option value="1">Computador Nao Liga</option>
+			<option value="2">Monitor Nao Liga</option>
+			<option value="3">Nao Conecta Internet</option>
+			<option value="4">Windows Nao Inicia</option>
+			<option value="5">Microsoft Office Nao Abre</option>
+			<option value="6">AntiVirus Desatualizado</option>
 			</select>			
 			</td>
           </tr>
-		  
+		  <tr>
+            <td><span class="style1">Motivo:</span></td>
+			<td>
+			<select class="campos" name="motivo">
+			<option value="op" selected>Selecione uma op&ccedil;&atilde;o</option>
+			<option value="1">Duvidas Gerais Sobre o Uso</option>
+			<option value="2">Mal Funcionamento Nao Critico</option>
+			<option value="3">Mal Funcionamento Critico COM Contorno</option>
+			<option value="4">Mal Funcionamento Critico SEM Contorno</option>
+			</select>			
+			</td>
+          </tr>
+		  <tr>
+            <td><span class="style1">Impacto:</span></td>
+			<td>
+			<select class="campos" name="impacto">
+			<option value="op" selected>Selecione uma op&ccedil;&atilde;o</option>
+			<option value="1">Baixo</option>
+			<option value="2">Medio</option>
+			<option value="3">Alto</option>
+			<option value="4">Critico</option>
+			</select>			
+			</td>
+          </tr>
 		  <tr>
 			  <td><span class="style1">Mensagem:</span></td>
 			  <td><textarea class="campos" name="mensagem" cols="45" rows="7"></textarea></td>
@@ -120,7 +140,7 @@ body,td,th {
 	 <table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: collapse; border: 0px solid silver" bordercolor="#111111" align="center">
 	  <tr><br>
 	  	  <br>
-		<td align="center"><a href="principal.php"><img src="imagens/voltar.png" width="50" height="50" border="0"/></a></td>
+		<td align="center"><a href="principal.html"><img src="imagens/voltar.png" width="50" height="50" border="0"/></a></td>
       </tr>
     </table>
     <br />
