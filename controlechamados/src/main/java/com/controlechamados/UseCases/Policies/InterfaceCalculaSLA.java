@@ -2,9 +2,9 @@ package com.controlechamados.UseCases.Policies;
 
 import java.util.Date;
 
-public interface CalculaSLAInterface {
+public interface InterfaceCalculaSLA{
     
-public Date addDias();
+public Date addDias(int dias);
 
 public Date getTime();
 

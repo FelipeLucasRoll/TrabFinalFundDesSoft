@@ -6,7 +6,16 @@ public class CalculadorSLA1 extends SuperCalculadorSLA {
 
 
 
-	public Chamado organizaChamados(Chamado chamado) {
+	public Chamado organizaChamados(final Chamado chamado) {
+
+		if(chamado.getCliente().getPlano().equals("Basic")){
+
+			chamado.setPrazoLimite(super.addDias(1));
+		}
+		else {
+			chamado.setPrazoLimite(super.addDias(2));
+		}
+
 		return chamado;
 	}
 

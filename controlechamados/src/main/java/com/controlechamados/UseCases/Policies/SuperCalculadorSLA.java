@@ -7,13 +7,13 @@ import java.util.concurrent.TimeUnit;
 
 
 
-public class SuperCalculadorSLA implements CalculaSLAInterface{
+public abstract class SuperCalculadorSLA implements InterfaceCalculaSLA{
 
     Date data = new Date();
     SimpleDateFormat dateFormat = new SimpleDateFormat( "yyyy-MM-dd" );
 
     @Override
-    public Date addDias(){
+    public Date addDias(int dias){
     data = new Date(data.getTime() + TimeUnit.DAYS.toMillis(10));
     return data;
 }

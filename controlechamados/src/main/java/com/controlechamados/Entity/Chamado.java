@@ -7,6 +7,8 @@ public class Chamado {
 
 	private int idchamado;
 
+	private Cliente cliente;
+
 	private int idcliente;
 
 	private int idtecnico;
@@ -25,8 +27,10 @@ public class Chamado {
 
 
 
-	public Chamado(int idchamado, int idcliente, int idtecnico, String status, List<Habilidade> habilidades, String descricao, Date horaAbertura, Date horaFechamento, Date prazoLimite) {
+
+	public Chamado(int idchamado, Cliente cliente, int idcliente, int idtecnico, String status, List<Habilidade> habilidades, String descricao, Date horaAbertura, Date horaFechamento, Date prazoLimite) {
 		this.idchamado = idchamado;
+		this.cliente = cliente;
 		this.idcliente = idcliente;
 		this.idtecnico = idtecnico;
 		this.status = status;
@@ -36,7 +40,7 @@ public class Chamado {
 		this.horaFechamento = horaFechamento;
 		this.prazoLimite = prazoLimite;
 	}
-
+	
 
 
 
@@ -46,49 +50,88 @@ public class Chamado {
 
 	}
 
-	public int getIdCliente() {
-		return 0;
+
+
+
+	public int getIdchamado() {
+		return this.idchamado;
 	}
 
-	public int getIdTecnico() {
-		return 0;
+	public void setIdchamado(int idchamado) {
+		this.idchamado = idchamado;
+	}
+
+	public Cliente getCliente() {
+		return this.cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public int getIdcliente() {
+		return this.idcliente;
+	}
+
+	public void setIdcliente(int idcliente) {
+		this.idcliente = idcliente;
+	}
+
+	public int getIdtecnico() {
+		return this.idtecnico;
+	}
+
+	public void setIdtecnico(int idtecnico) {
+		this.idtecnico = idtecnico;
 	}
 
 	public String getStatus() {
-		return status;
+		return this.status;
+	}
 
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public List<Habilidade> getHabilidades() {
-		return null;
+		return this.habilidades;
+	}
+
+	public void setHabilidades(List<Habilidade> habilidades) {
+		this.habilidades = habilidades;
 	}
 
 	public String getDescricao() {
-		return null;
+		return this.descricao;
 	}
 
-	public Date getDateTime() {
-		return null;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
-	public void setIdCliente() {
-
+	public Date getHoraAbertura() {
+		return this.horaAbertura;
 	}
 
-	public void setIdTecnico() {
-
+	public void setHoraAbertura(Date horaAbertura) {
+		this.horaAbertura = horaAbertura;
 	}
 
-	public void setStatus() {
-
+	public Date getHoraFechamento() {
+		return this.horaFechamento;
 	}
 
-	public void setHabilidades() {
-
+	public void setHoraFechamento(Date horaFechamento) {
+		this.horaFechamento = horaFechamento;
 	}
 
-	public void setDescricao() {
-
+	public Date getPrazoLimite() {
+		return this.prazoLimite;
 	}
+
+	public void setPrazoLimite(Date prazoLimite) {
+		this.prazoLimite = prazoLimite;
+	}
+	
 
 }
