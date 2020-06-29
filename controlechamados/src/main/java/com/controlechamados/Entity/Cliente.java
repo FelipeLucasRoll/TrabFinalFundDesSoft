@@ -1,5 +1,4 @@
 package com.controlechamados.Entity;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,21 +11,13 @@ public class Cliente {
 @GeneratedValue(strategy=GenerationType.AUTO)
 
 	private int idcliente;
-
 	private String nome;
-
 	private String cpf;
-
 	private String datanasc;
-
 	private String telefone;
-
 	private String email;
-
 	private String login;
-
 	private String senha;
-
 	private String plano;
 
 

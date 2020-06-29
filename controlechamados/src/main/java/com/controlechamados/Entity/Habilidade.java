@@ -1,5 +1,4 @@
 package com.controlechamados.Entity;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,14 +11,9 @@ public class Habilidade {
 @GeneratedValue(strategy=GenerationType.AUTO)
 
 	private int idhabilidade;
-
 	private String nome;
-
 	private char tipoHS;
-
 	private boolean manager;
-
-
 
 
 	public Habilidade(int idhabilidade, String nome, char tipoHS, boolean manager) {

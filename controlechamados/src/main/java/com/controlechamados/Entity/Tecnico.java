@@ -1,7 +1,5 @@
 package com.controlechamados.Entity;
-
 import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,17 +13,11 @@ public class Tecnico {
 
 
 	private int idtecnico;
-
 	private String nome;
-
 	private String cpf;
-
 	private String login;
-
 	private String senha;
-
 	private List<Habilidade> habilidades;
-
 	private double avaliacao;
 
 

@@ -1,8 +1,6 @@
 package com.controlechamados.Entity;
-
 import java.util.Date;
 import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -110,7 +108,7 @@ public class Chamado {
 		return this.habilidade;
 	}
 
-	public void setHabilidades(List<Habilidade> habilidades) {
+	public void setHabilidade(Habilidade habilidade) {
 		this.habilidade = habilidade;
 	}
 
