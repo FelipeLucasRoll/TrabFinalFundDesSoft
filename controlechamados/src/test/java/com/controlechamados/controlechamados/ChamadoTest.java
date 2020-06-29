@@ -13,7 +13,6 @@ public class ChamadoTest {
 @BeforeEach
 public void setup(){
 
-    c = new Chamado("ok");
 
 
 }
