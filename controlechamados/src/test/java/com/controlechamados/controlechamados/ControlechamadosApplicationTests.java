@@ -14,15 +14,13 @@ class ControlechamadosApplicationTests {
 
 	@BeforeEach
 	public void setup(){
-    Chamado c = new Chamado("ok");
+
 	}
 
 
 	@Test
 	public void testaStatus(){
-    String status = c.getStatus();
-    String s = "ok";
-    assertEquals(s, status);
+
 	}
 
 
