@@ -32,28 +32,40 @@ public class Habilidade {
 
 
 
+	public int getIdhabilidade() {
+		return this.idhabilidade;
+	}
+
+	public void setIdhabilidade(int idhabilidade) {
+		this.idhabilidade = idhabilidade;
+	}
+
 	public String getNome() {
-		return null;
+		return this.nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public char getTipoHS() {
-		return 0;
+		return this.tipoHS;
+	}
+
+	public void setTipoHS(char tipoHS) {
+		this.tipoHS = tipoHS;
+	}
+
+	public boolean isManager() {
+		return this.manager;
 	}
 
 	public boolean getManager() {
-		return false;
+		return this.manager;
 	}
 
-	public void setNome() {
-
-	}
-
-	public void setTipoHS() {
-
-	}
-
-	public void setManager() {
-
+	public void setManager(boolean manager) {
+		this.manager = manager;
 	}
 
 }

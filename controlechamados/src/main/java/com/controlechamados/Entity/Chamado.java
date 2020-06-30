@@ -153,6 +153,9 @@ public class Chamado {
 	public void setPrioridade(int prioridade) {
 		this.prioridade = prioridade;
 	}
+	public void setHabilidade(Habilidade habilidade) {
+		this.habilidade = habilidade;
+	}
 
 
 }

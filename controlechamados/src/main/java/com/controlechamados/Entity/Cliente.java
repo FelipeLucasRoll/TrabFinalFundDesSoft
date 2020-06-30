@@ -79,36 +79,37 @@ public class Cliente {
 		return null;
 	}
 
-	public void setNome() {
 
+	public int getIdcliente() {
+		return this.idcliente;
 	}
 
-	public void setCpf() {
-
+	public void setIdcliente(int idcliente) {
+		this.idcliente = idcliente;
 	}
-
-	public void setDatanasc() {
-
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-
-	public void setTelefone() {
-
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
-
-	public void setEmail() {
-
+	public void setDatanasc(String datanasc) {
+		this.datanasc = datanasc;
 	}
-
-	public void setLogin() {
-
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
-
-	public void setSenha() {
-
+	public void setEmail(String email) {
+		this.email = email;
 	}
-
-	public void setPlano() {
-
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	public void setPlano(String plano) {
+		this.plano = plano;
 	}
 
 }
