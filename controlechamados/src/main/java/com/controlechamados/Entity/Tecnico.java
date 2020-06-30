@@ -1,19 +1,19 @@
 package com.controlechamados.Entity;
 import java.util.*;
-import javax.persistence.*;
+//import javax.persistence.*;
 
 
-@Entity
+//@Entity
 public class Tecnico {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer idtecnico;
 	private String nome;
 	private String cpf;
 	private String login;
 	private String senha;
-	@ManyToMany(targetEntity=Habilidade.class)
+//	@ManyToMany(targetEntity=Habilidade.class)
 	private List<Habilidade> habilidades;
 	private double avaliacao;
 

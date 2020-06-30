@@ -1,24 +1,24 @@
 package com.controlechamados.Entity;
 
 import java.util.*;
-import javax.persistence.*;
+//import javax.persistence.*;
 
 
-@Entity(name = "Chamado")
-@Table(name = "chamados")
+//@Entity(name = "Chamado")
+//@Table(name = "chamados")
 public class Chamado {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@Id
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer idchamado;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idcliente")
+    //@ManyToOne(fetch = FetchType.LAZY)
+    //@JoinColumn(name = "idcliente")
 	private Cliente cliente;
 	//private int idcliente;
 	private Integer idtecnico;
 	private String status;
-	@ManyToOne(optional = false, fetch = FetchType.LAZY)
-	@JoinColumn(name = "idhabilidade")
+	//@ManyToOne(optional = false, fetch = FetchType.LAZY)
+	//@JoinColumn(name = "idhabilidade")
 	private Habilidade habilidade;
 	private String descricao;
 	private Date horaAbertura;

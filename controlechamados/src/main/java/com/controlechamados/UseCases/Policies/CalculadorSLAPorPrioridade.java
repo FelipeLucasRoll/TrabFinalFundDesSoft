@@ -1,20 +1,17 @@
-package com.controlechamados.UseCases.Policies ;
-
-
-
-import java.util.Date;
-
+package com.controlechamados.UseCases.Policies;
 import com.controlechamados.Entity.Chamado;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CalculadorSLAPorPrioridade extends SuperCalculadorSLA {
-
-	public CalculadorSLAPorPrioridade(Date data) {
-		super(data);
+	
+	public CalculadorSLAPorPrioridade() {
+		
 	}
 
 	public Chamado calculaSLA(Chamado chamado) {
 	
-		if(chamado.getPrioridade() <= 1){
+		if(chamado.getPrioridade() > 3){
 
 			chamado.setPrazoLimite(super.addDias(1));
 		}

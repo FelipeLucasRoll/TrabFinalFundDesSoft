@@ -1,15 +1,15 @@
 package com.controlechamados.Entity;
 
 //import java.util.*;
-import javax.persistence.*;
+//import javax.persistence.*;
 
 
-@Entity
+//@Entity
 public class Habilidade {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "idhabilidade")
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.AUTO)
+//	@Column(name = "idhabilidade")
 	private Integer idhabilidade;
 	private String nome;
 	private char tipoHS;

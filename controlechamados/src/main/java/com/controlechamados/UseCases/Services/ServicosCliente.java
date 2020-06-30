@@ -1,23 +1,29 @@
 package com.controlechamados.UseCases.Services;
 
 import java.util.List;
+import java.util.Map;
+
 import com.controlechamados.Entity.Chamado;
-import com.controlechamados.Interface.Persistence.RepoChamados;
+import com.controlechamados.UseCases.Repository.*;
 //import com.controlechamados.UseCases.Repository.RepoChamados;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.*;
 
 @Service
 public class ServicosCliente {
-
-
 	private RepoChamados cadChamados;
 
 
-	public List<Chamado> listaDeChamados(){
-        List<Chamado> chamados = (List<Chamado>) cadChamados.findAll();
+	@Autowired
+	public ServicosCliente(RepoChamados repositorio){
+		this.cadChamados = repositorio;
+	}
+
+	public Map<Integer, Chamado> listaDeChamados(Integer idcli){
+        Map<Integer, Chamado> chamados = cadChamados.recuperaPorCliente(idcli);
 		if (chamados == null){
-            throw new IllegalArgumentException("Aluno nao encontrado");
+            throw new IllegalArgumentException("Erro Na Consulta");
         }else{
             return chamados;
         }
