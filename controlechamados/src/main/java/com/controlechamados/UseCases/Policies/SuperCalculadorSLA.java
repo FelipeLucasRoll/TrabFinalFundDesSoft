@@ -6,26 +6,20 @@ import java.util.concurrent.TimeUnit;
 
 
 
-public abstract class SuperCalculadorSLA implements InterfaceCalculaSLA{
+public abstract class SuperCalculadorSLA {
     Date data = new Date();
 
     public SuperCalculadorSLA(Date data) {
         this.data = data;
     }
 
-
-  
-
-    @Override
     public Date addDias(int dias){
-    data = new Date(data.getTime() + TimeUnit.DAYS.toMillis(dias));
-    return data;
-}
+        data = new Date(data.getTime() + TimeUnit.DAYS.toMillis(dias));
+        return data;
+    }
 
-    @Override
     public Date getTime(){
-    return data;
-
- }
+        return data;
+    }
 
 }

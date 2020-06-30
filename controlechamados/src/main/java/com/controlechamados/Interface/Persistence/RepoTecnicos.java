@@ -3,9 +3,9 @@ import java.util.*;
 import com.controlechamados.Entity.Tecnico;
 import org.springframework.data.repository.CrudRepository;
 
-public interface RepoTecnicosImpl extends CrudRepository<Tecnico,Integer> {
+public interface RepoTecnicos extends CrudRepository<Tecnico,Integer> {
     
-     //HashMap<Integer,Tecnico> Tecnicos (int idtecnico);
-     //HashMap<Integer,Tecnico>findall();
+     HashMap<Integer,Tecnico> Tecnicos (int idtecnico);
+     HashMap<Integer,Tecnico>findall();
 
 }

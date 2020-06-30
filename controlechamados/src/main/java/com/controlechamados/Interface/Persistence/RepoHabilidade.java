@@ -3,9 +3,9 @@ import java.util.Map;
 import com.controlechamados.Entity.Habilidade;
 import org.springframework.data.repository.CrudRepository;
 
-public interface RepoHabilidadeImpl extends CrudRepository<Habilidade,Integer> {
+public interface RepoHabilidade extends CrudRepository<Habilidade,Integer> {
     
-     //Map<Integer,Habilidade> habilidades (int idhabilidade);
-     //Map<Integer,Habilidade>findall();
+     Map<Integer,Habilidade> habilidades (int idhabilidade);
+     Map<Integer,Habilidade>findall();
 
 }

@@ -16,7 +16,7 @@ public class Chamado {
     @JoinColumn(name = "idcliente")
 	private Cliente cliente;
 	//private int idcliente;
-	private int idtecnico;
+	private Integer idtecnico;
 	private String status;
 	@ManyToOne(optional = false, fetch = FetchType.LAZY)
 	@JoinColumn(name = "idhabilidade")
@@ -28,17 +28,18 @@ public class Chamado {
 	private int prioridade;
 
 	public static class Builder{
+
 		private int idchamado = 0;
 		private Cliente cliente = null;
-		private int idcliente = 0;
+		//private int idcliente = 0;
 		private int idtecnico = 0;
-		private String status = "";
-		private Habilidade habilidade = null;
+		private String status = "Aberto";
+		private Habilidade habilidade = new Habilidade(0,"teste",'h',false);
 		private String descricao = "";
 		private Date horaAbertura = null;
 		private Date horaFechamento = null;
 		private Date prazoLimite = null;
-		private int prioridade = 0;
+		private int prioridade = 1;
 		
 		public Builder(){
 		}
@@ -47,6 +48,40 @@ public class Chamado {
 			this.idchamado = idchamado;
 			return this;
 		}
+
+		public Builder idChamado(int idc) { this.idchamado = idc;
+			return this;
+		}
+		public Builder cliente(Cliente cli) { this.cliente = cli;
+			return this;
+		}
+		public Builder idTecnico(int idt) { this.idtecnico = idt;
+			return this;
+		}
+		public Builder status(String stat) { this.status = stat;
+			return this;
+		}
+		public Builder habilidade(Habilidade hab) { this.habilidade = hab;
+			return this;
+		}
+		public Builder descricao(int id) { this.idchamado = id;
+			return this;
+		}
+		public Builder horaAbertura(int id) { this.idchamado = id;
+			return this;
+		}
+		public Builder horaAbertura(int id) { this.idchamado = id;
+			return this;
+		}
+		public Builder horaAbertura(int id) { this.idchamado = id;
+			return this;
+		}
+		public Builder prioridade(int pri) { this.prioridade = pri;
+			return this;
+		}
+
+
+
 	
 		public Chamado build(){
 			return new Chamado(this);
@@ -55,10 +90,10 @@ public class Chamado {
 	}	
 
 	private Chamado(Builder builder) {
-		this.idchamado = builder.idchamado;
+		this.idchamado = new Integer(builder.idchamado);
 		this.cliente = builder.cliente;
 		//this.idcliente = builder.idcliente;
-		this.idtecnico = builder.idtecnico;
+		this.idtecnico = new Integer(builder.idtecnico);
 		this.status = builder.status;
 		this.habilidade = builder.habilidade;
 		this.descricao = builder.descricao;

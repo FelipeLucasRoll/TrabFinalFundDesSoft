@@ -3,9 +3,9 @@ import java.util.Map;
 import com.controlechamados.Entity.Cliente;
 import org.springframework.data.repository.CrudRepository;
 
-public interface RepoClientesImpl extends CrudRepository<Cliente, Integer> {
+public interface RepoClientes extends CrudRepository<Cliente, Integer> {
     
-     //Map<Integer,Cliente> Clientes (int idcliente);
-     //Map<Integer,Cliente>findall();
+     Map<Integer,Cliente> Clientes (int idcliente);
+     Map<Integer,Cliente>findall();
 
 }

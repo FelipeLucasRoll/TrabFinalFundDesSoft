@@ -12,7 +12,7 @@ public class CalculadorSLAPorPrioridade extends SuperCalculadorSLA {
 		super(data);
 	}
 
-	public Chamado prioridade(Chamado chamado) {
+	public Chamado calculaSLA(Chamado chamado) {
 	
 		if(chamado.getPrioridade() <= 1){
 

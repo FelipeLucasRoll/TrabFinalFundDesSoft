@@ -1,18 +1,18 @@
 package com.controlechamados.Entity;
 
 import java.util.*;
-import javax.persistence.*;
+//import javax.persistence.*;
 
 
 
 
-@Entity(name = "Cliente")
-@Table(name = "clientes")
+//@Entity(name = "Cliente")
+//@Table(name = "clientes")
 public class Cliente {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "idcliente")
+	//@Id
+	//@GeneratedValue(strategy=GenerationType.AUTO)
+	//@Column(name = "idcliente")
 	private Integer idcliente;
 	private String nome;
 	private String cpf;
@@ -23,30 +23,35 @@ public class Cliente {
 	private String senha;
 	private String plano;
 	//@OneToMany(mappedBy="cliente", targetEntity=Chamado.class)
-	@OneToMany(
-		mappedBy = "cliente",
-        cascade = CascadeType.ALL,
-        orphanRemoval = true
-	)
+	//@OneToMany(
+	//	mappedBy = "cliente",
+    //    cascade = CascadeType.ALL,
+    //    orphanRemoval = true
+	//)
     private List<Chamado> chamados;
 
 
 
 
-	public Cliente(int idcliente, String nome, String cpf, String datanasc, String telefone, String email, String login, String senha, String plano) {
-		this.idcliente = idcliente;
+	public Cliente(int idcliente, String nome, String cpf, String datanasc, String email, String login, String senha, String plano) {
+		this.idcliente = new Integer(idcliente);
 		this.nome = nome;
 		this.cpf = cpf;
-		this.datanasc = datanasc;
-		this.telefone = telefone;
+		this.telefone = null;
 		this.email = email;
-		this.login = login;
 		this.senha = senha;
 		this.plano = plano;
+		//this.datanasc = datanasc;
+		//this.login = login;
 	}
 
 
-
+	public List<Chamado> addChamadoNaListaDoCliente(Chamado chamado){
+		List<Chamado> lista = getChamados();
+		lista.add(chamado);
+		chamado.setCliente(this);
+		return lista;
+	}
 
 	public String getNome() {
 		return null;
@@ -56,9 +61,9 @@ public class Cliente {
 		return null;
 	}
 
-	public String getDatanasc() {
-		return null;
-	}
+	//public String getDatanasc() {
+	//	return null;
+	//}
 
 	public String getTelefone() {
 		return null;
@@ -68,9 +73,9 @@ public class Cliente {
 		return null;
 	}
 
-	public String getLogin() {
-		return null;
-	}
+	//public String getLogin() {
+	//	return null;
+	//}
 
 	public String getSenha() {
 		return null;
@@ -99,18 +104,18 @@ public class Cliente {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public void setDatanasc(String datanasc) {
-		this.datanasc = datanasc;
-	}
+	//public void setDatanasc(String datanasc) {
+	//	this.datanasc = datanasc;
+	//}
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public void setLogin(String login) {
-		this.login = login;
-	}
+	//public void setLogin(String login) {
+	//	this.login = login;
+	//}
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}

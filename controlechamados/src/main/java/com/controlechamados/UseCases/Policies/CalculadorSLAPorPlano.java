@@ -4,14 +4,13 @@ import java.util.Date;
 
 import com.controlechamados.Entity.Chamado;
 
-public class CalculadorSLAPorPlano extends SuperCalculadorSLA {
+public class CalculadorSLAPorPlano extends SuperCalculadorSLA implements InterfaceCalculaSLA {
 
 	public CalculadorSLAPorPlano(Date data) {
 		super(data);
-
 	}
 
-	public Chamado plano(Chamado chamado) {
+	public Chamado calculaSLA(Chamado chamado) {
 
 		if(chamado.getCliente().getPlano().equals("Basic")){
 
