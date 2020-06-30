@@ -1,19 +1,21 @@
 package com.controlechamados.Entity;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import java.util.*;
+import javax.persistence.*;
+
 
 @Entity
 public class Habilidade {
 	
-@Id
-@GeneratedValue(strategy=GenerationType.AUTO)
-
-	private int idhabilidade;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name = "idhabilidade")
+	private Integer idhabilidade;
 	private String nome;
 	private char tipoHS;
 	private boolean manager;
+	//@ManyToMany(targetEntity=Habilidade.class)
+	//private List<Tecnico> tecnicos;
 
 
 	public Habilidade(int idhabilidade, String nome, char tipoHS, boolean manager) {

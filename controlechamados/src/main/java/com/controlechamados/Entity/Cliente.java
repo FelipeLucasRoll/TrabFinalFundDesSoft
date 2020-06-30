@@ -1,16 +1,19 @@
 package com.controlechamados.Entity;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-@Entity
+import java.util.*;
+import javax.persistence.*;
+
+
+
+
+@Entity(name = "Cliente")
+@Table(name = "clientes")
 public class Cliente {
 
-@Id
-@GeneratedValue(strategy=GenerationType.AUTO)
-
-	private int idcliente;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name = "idcliente")
+	private Integer idcliente;
 	private String nome;
 	private String cpf;
 	private String datanasc;
@@ -19,6 +22,13 @@ public class Cliente {
 	private String login;
 	private String senha;
 	private String plano;
+	//@OneToMany(mappedBy="cliente", targetEntity=Chamado.class)
+	@OneToMany(
+		mappedBy = "cliente",
+        cascade = CascadeType.ALL,
+        orphanRemoval = true
+	)
+    private List<Chamado> chamados;
 
 
 
@@ -68,6 +78,10 @@ public class Cliente {
 
 	public String getPlano() {
 		return null;
+	}
+
+	public List<Chamado> getChamados() {
+		return chamados;
 	}
 
 	public void setNome() {

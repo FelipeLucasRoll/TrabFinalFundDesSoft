@@ -8,9 +8,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.controlechamados"})
-@ComponentScan({"com.controlechamados"})
 @EnableJpaRepositories({"com.controlechamados"})
-@EntityScan({"com.controlechamados"})
+@EntityScan(basePackages = {"com.controlechamados"})
 
 public class ControlechamadosApplication {
 

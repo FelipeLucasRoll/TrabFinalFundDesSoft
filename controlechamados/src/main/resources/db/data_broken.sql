@@ -1,7 +1,6 @@
 INSERT INTO Chamado (idchamado,idcliente,idtecnico,status1,descricao,horaAbertura,horaFechamento,prazoLimite,prioridade) VALUES 
 (12345,67890,02873,"Cancelado","Cliente cancelou o servico",'Mon Mar 14 11:48:49 BRT 2011','Tue Mar 15 13:05:35 BRT 2011','Sun Mar 20 05:00:00 BRT 2011',1);
 
-
 INSERT INTO Chamado (idchamado,idcliente,idtecnico,status1,descricao,horaAbertura,horaFechamento,prazoLimite,prioridade) VALUES 
 (54321,09876,35643,"Aprovado","Computador nao liga",'Wed Mar 10 14:56:21 BRT 2020','Fri Mar 12 15:00:00 BRT 2020','Wed Mar 17 16:00:00 BRT 2020',2);
 
@@ -45,17 +44,17 @@ INSERT INTO Habilidade (idhabilidade,nome,tipoHS,manager) VALUES
 
 
 
-INSERT INTO Tecnico (idtecnico,nome,cpf,login1,senha,habilidades,avaliacao) VALUES
-(35643,"Kaique Emanuel","360.394.593-01","ke1010","85GCOGguD2","Manutencao",9.8);
+INSERT INTO Tecnico (idtecnico,nome,cpf,login1,senha,avaliacao) VALUES
+(35643,"Kaique Emanuel","360.394.593-01","ke1010","85GCOGguD2",9.8);
 
-INSERT INTO Tecnico (idtecnico,nome,cpf,login1,senha,habilidades,avaliacao) VALUES
-(02873,"Roberto Kaique","278.148.397-42","rkaique2","zPaqXzfrtO","Formatacao",7.0);
+INSERT INTO Tecnico (idtecnico,nome,cpf,login1,senha,avaliacao) VALUES
+(02873,"Roberto Kaique","278.148.397-42","rkaique2","zPaqXzfrtO",7.0);
 
-INSERT INTO Tecnico (idtecnico,nome,cpf,login1,senha,habilidades,avaliacao) VALUES
-(78554,"Isis Isabel Gomes","533.030.122-02","isiIg","Pn3lrRm0f1","Manutencao",10);
+INSERT INTO Tecnico (idtecnico,nome,cpf,login1,senha,avaliacao) VALUES
+(78554,"Isis Isabel Gomes","533.030.122-02","isiIg","Pn3lrRm0f1",10);
 
-INSERT INTO Tecnico (idtecnico,nome,cpf,login1,senha,habilidades,avaliacao) VALUES
-(78554,"Pedro Henrique","721.705.436-27","ph01","4Xrhh46626","Instalacao de Softwares",9.5);
+INSERT INTO Tecnico (idtecnico,nome,cpf,login1,senha,avaliacao) VALUES
+(78554,"Pedro Henrique","721.705.436-27","ph01","4Xrhh46626",9.5);
 
 
 

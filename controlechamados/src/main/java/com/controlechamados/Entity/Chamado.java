@@ -1,22 +1,25 @@
 package com.controlechamados.Entity;
-import java.util.Date;
-import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-@Entity
+import java.util.*;
+import javax.persistence.*;
+
+
+@Entity(name = "Chamado")
+@Table(name = "chamados")
 public class Chamado {
 
 	
-@Id
-@GeneratedValue(strategy=GenerationType.AUTO)
-	private int idchamado;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer idchamado;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idcliente")
 	private Cliente cliente;
-	private int idcliente;
+	//private int idcliente;
 	private int idtecnico;
 	private String status;
+	@ManyToOne(optional = false, fetch = FetchType.LAZY)
+	@JoinColumn(name = "idhabilidade")
 	private Habilidade habilidade;
 	private String descricao;
 	private Date horaAbertura;
@@ -54,7 +57,7 @@ public class Chamado {
 	private Chamado(Builder builder) {
 		this.idchamado = builder.idchamado;
 		this.cliente = builder.cliente;
-		this.idcliente = builder.idcliente;
+		//this.idcliente = builder.idcliente;
 		this.idtecnico = builder.idtecnico;
 		this.status = builder.status;
 		this.habilidade = builder.habilidade;
@@ -80,13 +83,13 @@ public class Chamado {
 		this.cliente = cliente;
 	}
 
-	public int getIdcliente() {
-		return this.idcliente;
-	}
+	//public int getIdcliente() {
+	//	return this.idcliente;
+	//}
 
-	public void setIdcliente(int idcliente) {
-		this.idcliente = idcliente;
-	}
+	//public void setIdcliente(int idcliente) {
+	//	this.idcliente = idcliente;
+	//}
 
 	public int getIdtecnico() {
 		return this.idtecnico;

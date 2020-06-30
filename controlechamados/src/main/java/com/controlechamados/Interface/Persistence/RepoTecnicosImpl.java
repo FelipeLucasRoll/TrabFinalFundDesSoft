@@ -1,13 +1,11 @@
 package com.controlechamados.Interface.Persistence;
-import java.util.Map;
+import java.util.*;
 import com.controlechamados.Entity.Tecnico;
 import org.springframework.data.repository.CrudRepository;
 
-public interface RepoTecnicosImpl extends CrudRepository<String,Tecnico> {
+public interface RepoTecnicosImpl extends CrudRepository<Tecnico,Integer> {
     
-     Map<String,Tecnico> Tecnicos (int idtecnico);
-     Map<String,Tecnico>findall();
-
-
+     //HashMap<Integer,Tecnico> Tecnicos (int idtecnico);
+     //HashMap<Integer,Tecnico>findall();
 
 }
