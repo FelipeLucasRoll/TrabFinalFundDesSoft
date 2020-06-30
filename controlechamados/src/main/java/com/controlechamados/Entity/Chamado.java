@@ -8,7 +8,6 @@ import javax.persistence.*;
 @Table(name = "chamados")
 public class Chamado {
 
-	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer idchamado;
@@ -36,9 +35,9 @@ public class Chamado {
 		private String status = "Aberto";
 		private Habilidade habilidade = new Habilidade(0,"teste",'h',false);
 		private String descricao = "";
-		private Date horaAbertura = null;
-		private Date horaFechamento = null;
-		private Date prazoLimite = null;
+		private Date horaabertura = new Date();
+		private Date horafechamento = null;
+		private Date prazolimite = null;
 		private int prioridade = 1;
 		
 		public Builder(){
@@ -67,22 +66,19 @@ public class Chamado {
 		public Builder descricao(int id) { this.idchamado = id;
 			return this;
 		}
-		public Builder horaAbertura(int id) { this.idchamado = id;
+		public Builder horaAbertura(Date dataab) { this.horaabertura = dataab;
 			return this;
 		}
-		public Builder horaAbertura(int id) { this.idchamado = id;
+		public Builder horaFechamento(Date dataenc) { this.horafechamento = dataenc;
 			return this;
 		}
-		public Builder horaAbertura(int id) { this.idchamado = id;
+		public Builder prazoLimite(Date datasla) { this.prazolimite = datasla;
 			return this;
 		}
 		public Builder prioridade(int pri) { this.prioridade = pri;
 			return this;
 		}
 
-
-
-	
 		public Chamado build(){
 			return new Chamado(this);
 		}
@@ -97,9 +93,10 @@ public class Chamado {
 		this.status = builder.status;
 		this.habilidade = builder.habilidade;
 		this.descricao = builder.descricao;
-		this.horaAbertura = builder.horaAbertura;
-		this.horaFechamento = builder.horaFechamento;
-		this.prazoLimite = builder.prazoLimite;
+		this.horaAbertura = builder.horaabertura;
+		this.horaFechamento = builder.horafechamento;
+		this.prazoLimite = builder.prazolimite;
+		this.prioridade = builder.prioridade;
 	}
 	
 	public int getIdchamado() {
@@ -185,6 +182,7 @@ public class Chamado {
 	public void setPrioridade(int prioridade) {
 		this.prioridade = prioridade;
 	}
+
 	public void setHabilidade(Habilidade habilidade) {
 		this.habilidade = habilidade;
 	}

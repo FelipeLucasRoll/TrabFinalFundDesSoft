@@ -1,6 +1,6 @@
 package com.controlechamados.Entity;
 
-import java.util.*;
+//import java.util.*;
 import javax.persistence.*;
 
 

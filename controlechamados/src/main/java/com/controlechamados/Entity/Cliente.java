@@ -33,7 +33,7 @@ public class Cliente {
 
 
 
-	public Cliente(int idcliente, String nome, String cpf, String datanasc, String email, String login, String senha, String plano) {
+	public Cliente(int idcliente, String nome, String cpf, String email, String senha, String plano) {
 		this.idcliente = new Integer(idcliente);
 		this.nome = nome;
 		this.cpf = cpf;
