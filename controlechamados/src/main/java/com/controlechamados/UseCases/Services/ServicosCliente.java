@@ -2,7 +2,9 @@ package com.controlechamados.UseCases.Services;
 
 import java.util.List;
 import com.controlechamados.Entity.Chamado;
+import org.springframework.stereotype.*;
 
+@Service
 public class ServicosCliente {
 
 	public Chamado abrirChamado() {
