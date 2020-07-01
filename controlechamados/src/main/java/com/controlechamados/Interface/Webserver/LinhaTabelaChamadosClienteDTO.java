@@ -12,10 +12,7 @@ public class LinhaTabelaChamadosClienteDTO {
     private Date prazoSLA;
     private String habilidadecategoria;
 
-
-    
-
-    public LinhaTabelaChamadosClienteDTO(Chamado c){
+   public LinhaTabelaChamadosClienteDTO(Chamado c){
         this.numchamado = new Integer(c.getIdchamado());
         this.titulo = c.getTitulo();
         this.nometecnico = "nenhum";
@@ -24,5 +21,12 @@ public class LinhaTabelaChamadosClienteDTO {
         this.prazoSLA = c.getPrazoLimite();
         this.habilidadecategoria = c.getHabilidade().getNome();
     }
-    
+
+    public String getHabilidadeCategoria() { return this.habilidadecategoria;}
+    public String getNomeTecnico() {return this.nometecnico;}
+    public String getTitulo() {return  this.titulo;}
+    public Date getprazoSLA() {return this.prazoSLA;}
+    public Integer getNumChamado() {return this.numchamado;}
+    public int getPrioridade() {return this.prioridade;}
+
 }
