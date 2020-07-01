@@ -27,7 +27,6 @@ public class Habilidade {
 
 
 
-
 	public int getIdhabilidade() {
 		return this.idhabilidade;
 	}
@@ -63,5 +62,7 @@ public class Habilidade {
 	public void setManager(boolean manager) {
 		this.manager = manager;
 	}
+
+
 
 }

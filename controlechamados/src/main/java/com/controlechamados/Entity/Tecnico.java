@@ -31,31 +31,6 @@ public class Tecnico {
 
 
 
-	public String getNome() {
-		return null;
-	}
-
-	public String getCpf() {
-		return null;
-	}
-
-	public String getLogin() {
-		return null;
-	}
-
-	public String getSenha() {
-		return null;
-	}
-
-	public List<Habilidade> getHabilidades() {
-		return null;
-	}
-
-	public double getAvaliacao() {
-		return 0;
-	}
-
-
 	public int getIdtecnico() {
 		return this.idtecnico;
 	}
@@ -63,24 +38,53 @@ public class Tecnico {
 	public void setIdtecnico(int idtecnico) {
 		this.idtecnico = idtecnico;
 	}
+
+	public String getNome() {
+		return this.nome;
+	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	public String getCpf() {
+		return this.cpf;
+	}
+
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+
+	public String getLogin() {
+		return this.login;
+	}
+
 	public void setLogin(String login) {
 		this.login = login;
 	}
+
+	public String getSenha() {
+		return this.senha;
+	}
+
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public List<Habilidade> getHabilidades() {
+		return this.habilidades;
+	}
+
 	public void setHabilidades(List<Habilidade> habilidades) {
 		this.habilidades = habilidades;
 	}
+
+	public double getAvaliacao() {
+		return this.avaliacao;
+	}
+
 	public void setAvaliacao(double avaliacao) {
 		this.avaliacao = avaliacao;
 	}
-	
 
 }
