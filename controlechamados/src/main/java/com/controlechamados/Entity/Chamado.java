@@ -20,6 +20,7 @@ public class Chamado {
 	//@ManyToOne(optional = false, fetch = FetchType.LAZY)
 	//@JoinColumn(name = "idhabilidade")
 	private Habilidade habilidade;
+	private String titulo;
 	private String descricao;
 	private Date horaAbertura;
 	private Date horaFechamento;
@@ -34,6 +35,7 @@ public class Chamado {
 		private int idtecnico = 0;
 		private String status = "Aberto";
 		private Habilidade habilidade = new Habilidade(0,"teste",'h',false);
+		private String titulo;
 		private String descricao = "";
 		private Date horaabertura = new Date();
 		private Date horafechamento = null;
@@ -63,7 +65,10 @@ public class Chamado {
 		public Builder habilidade(Habilidade hab) { this.habilidade = hab;
 			return this;
 		}
-		public Builder descricao(int id) { this.idchamado = id;
+		public Builder titulo(String tit) { this.titulo = tit;
+			return this;
+		}
+		public Builder descricao(String desc) {this.descricao = desc;
 			return this;
 		}
 		public Builder horaAbertura(Date dataab) { this.horaabertura = dataab;
@@ -92,6 +97,7 @@ public class Chamado {
 		this.idtecnico = new Integer(builder.idtecnico);
 		this.status = builder.status;
 		this.habilidade = builder.habilidade;
+		this.titulo = builder.titulo;
 		this.descricao = builder.descricao;
 		this.horaAbertura = builder.horaabertura;
 		this.horaFechamento = builder.horafechamento;
@@ -149,6 +155,15 @@ public class Chamado {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	
+	public String getTitulo() {
+		return this.titulo;
+	}
+
+	public void setTitulo(String tit) {
+		this.titulo = tit;
 	}
 
 	public Date getHoraAbertura() {

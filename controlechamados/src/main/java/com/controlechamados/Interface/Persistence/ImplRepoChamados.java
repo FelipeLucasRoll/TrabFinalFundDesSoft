@@ -2,8 +2,7 @@ package com.controlechamados.Interface.Persistence;
 
 import java.util.*;
 
-import com.controlechamados.Entity.Chamado;
-import com.controlechamados.Entity.Cliente;
+import com.controlechamados.Entity.*;
 import com.controlechamados.UseCases.Repository.RepoChamados;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,7 @@ public class ImplRepoChamados implements RepoChamados {
         Cliente teste = new Cliente(666, "ClienteTeste", "077.027.430-77", "teste@teste.com", "abc123", "Basic");
         
         for(int i = 1000 ; i < 1020 ; i++){
-            chamados.put(i,new Chamado.Builder().cliente(teste).chamado(i).horaAbertura(calendar.getTime()).build());
+            chamados.put(i,new Chamado.Builder().cliente(teste).chamado(i).horaAbertura(calendar.getTime()).titulo("teste").habilidade(new Habilidade(0, "habteste", 'H', false)).build());
             calendar.add(Calendar.MINUTE, 10);
  
        }
