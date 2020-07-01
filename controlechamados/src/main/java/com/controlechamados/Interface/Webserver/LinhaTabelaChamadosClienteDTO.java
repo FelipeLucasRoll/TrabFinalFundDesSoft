@@ -23,7 +23,6 @@ public class LinhaTabelaChamadosClienteDTO {
         this.prioridade = c.getPrioridade();
         this.prazoSLA = c.getPrazoLimite();
         this.habilidadecategoria = c.getHabilidade().getNome();
-
     }
     
 }

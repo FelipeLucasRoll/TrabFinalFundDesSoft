@@ -21,14 +21,16 @@ public class ClienteFachadaRemota {
 	}
 
 	@GetMapping("/listachamados")
-	public List<LinhaTabelaChamadosClienteDTO> getChamadosCliente(@RequestParam Integer idcli) throws Exception {
+	public List<Chamado> getChamadosCliente(@RequestParam Integer idcli) throws Exception {
 		Map<Integer, Chamado> chamadosdocliente = servCliente.listaDeChamados(idcli);
 		List<Chamado> lista = new ArrayList<Chamado>(chamadosdocliente.values());
 		List<LinhaTabelaChamadosClienteDTO> listaDTO = new ArrayList<LinhaTabelaChamadosClienteDTO>();
-		for (Chamado c : lista){
-			listaDTO.add(new LinhaTabelaChamadosClienteDTO(c));
-		}
-        return listaDTO;
+		//for (Chamado c : lista){
+		//	LinhaTabelaChamadosClienteDTO lin = new LinhaTabelaChamadosClienteDTO(c);
+		//	listaDTO.add(c);
+		//}
+		//return listaDTO;
+		return lista;
 	}
 
 
