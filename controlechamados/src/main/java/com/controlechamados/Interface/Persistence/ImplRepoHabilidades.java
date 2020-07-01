@@ -1,14 +1,13 @@
 package com.controlechamados.Interface.Persistence;
 
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
-
 import com.controlechamados.Entity.Habilidade;
 import com.controlechamados.UseCases.Repository.RepoHabilidade;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ImplRepoHabilidades implements RepoHabilidade {
 
     private Map<Integer,Habilidade> listahabilidades;
