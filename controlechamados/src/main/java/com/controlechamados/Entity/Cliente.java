@@ -33,18 +33,17 @@ public class Cliente {
 
 
 
-	public Cliente(int idcliente, String nome, String cpf, String email, String senha, String plano) {
-		this.idcliente = new Integer(idcliente);
+	public Cliente(int idcliente, String nome, String cpf, String datanasc, String telefone, String email, String login, String senha, String plano) {
+		this.idcliente = idcliente;
 		this.nome = nome;
 		this.cpf = cpf;
-		this.telefone = null;
+		this.datanasc = datanasc;
+		this.telefone = telefone;
 		this.email = email;
+		this.login = login;
 		this.senha = senha;
 		this.plano = plano;
-		//this.datanasc = datanasc;
-		//this.login = login;
 	}
-
 
 	public List<Chamado> addChamadoNaListaDoCliente(Chamado chamado){
 		List<Chamado> lista = getChamados();
@@ -53,43 +52,10 @@ public class Cliente {
 		return lista;
 	}
 
-	public String getNome() {
-		return null;
-	}
-
-	public String getCpf() {
-		return null;
-	}
-
-	//public String getDatanasc() {
-	//	return null;
-	//}
-
-	public String getTelefone() {
-		return null;
-	}
-
-	public String getEmail() {
-		return null;
-	}
-
-	//public String getLogin() {
-	//	return null;
-	//}
-
-	public String getSenha() {
-		return null;
-	}
-
-	public String getPlano() {
-		return null;
-	}
-
-	public List<Chamado> getChamados() {
+	
+	private List<Chamado> getChamados() {
 		return chamados;
 	}
-
-	public void setNome() {}
 
 	public int getIdcliente() {
 		return this.idcliente;
@@ -98,27 +64,67 @@ public class Cliente {
 	public void setIdcliente(int idcliente) {
 		this.idcliente = idcliente;
 	}
+
+	public String getNome() {
+		return this.nome;
+	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	public String getCpf() {
+		return this.cpf;
+	}
+
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	//public void setDatanasc(String datanasc) {
-	//	this.datanasc = datanasc;
-	//}
+
+	public String getDatanasc() {
+		return this.datanasc;
+	}
+
+	public void setDatanasc(String datanasc) {
+		this.datanasc = datanasc;
+	}
+
+	public String getTelefone() {
+		return this.telefone;
+	}
+
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+
+	public String getEmail() {
+		return this.email;
+	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	//public void setLogin(String login) {
-	//	this.login = login;
-	//}
+
+	public String getLogin() {
+		return this.login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public String getSenha() {
+		return this.senha;
+	}
+
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public String getPlano() {
+		return this.plano;
+	}
+
 	public void setPlano(String plano) {
 		this.plano = plano;
 	}

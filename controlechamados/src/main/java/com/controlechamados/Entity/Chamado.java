@@ -14,7 +14,7 @@ public class Chamado {
     //@ManyToOne(fetch = FetchType.LAZY)
     //@JoinColumn(name = "idcliente")
 	private Cliente cliente;
-	//private int idcliente;
+	private int idcliente;
 	private Integer idtecnico;
 	private String status;
 	//@ManyToOne(optional = false, fetch = FetchType.LAZY)
@@ -30,7 +30,7 @@ public class Chamado {
 
 		private int idchamado = 0;
 		private Cliente cliente = null;
-		//private int idcliente = 0;
+		private int idcliente = 0;
 		private int idtecnico = 0;
 		private String status = "Aberto";
 		private Habilidade habilidade = new Habilidade(0,"teste",'h',false);
@@ -88,7 +88,7 @@ public class Chamado {
 	private Chamado(Builder builder) {
 		this.idchamado = new Integer(builder.idchamado);
 		this.cliente = builder.cliente;
-		//this.idcliente = builder.idcliente;
+		this.idcliente = builder.idcliente;
 		this.idtecnico = new Integer(builder.idtecnico);
 		this.status = builder.status;
 		this.habilidade = builder.habilidade;
@@ -115,13 +115,13 @@ public class Chamado {
 		this.cliente = cliente;
 	}
 
-	//public int getIdcliente() {
-	//	return this.idcliente;
-	//}
+	public int getIdcliente() {
+		return this.idcliente;
+	}
 
-	//public void setIdcliente(int idcliente) {
-	//	this.idcliente = idcliente;
-	//}
+	public void setIdcliente(int idcliente) {
+		this.idcliente = idcliente;
+	}
 
 	public int getIdtecnico() {
 		return this.idtecnico;
@@ -187,5 +187,18 @@ public class Chamado {
 		this.habilidade = habilidade;
 	}
 
+	public Chamado(int idchamado, Cliente cliente, int idcliente, int idtecnico, String status, Habilidade habilidade, String descricao, Date horaAbertura, Date horaFechamento, Date prazoLimite, int prioridade) {
+		this.idchamado = idchamado;
+		this.cliente = cliente;
+		this.idcliente = idcliente;
+		this.idtecnico = idtecnico;
+		this.status = status;
+		this.habilidade = habilidade;
+		this.descricao = descricao;
+		this.horaAbertura = horaAbertura;
+		this.horaFechamento = horaFechamento;
+		this.prazoLimite = prazoLimite;
+		this.prioridade = prioridade;
+	}
 
 }
