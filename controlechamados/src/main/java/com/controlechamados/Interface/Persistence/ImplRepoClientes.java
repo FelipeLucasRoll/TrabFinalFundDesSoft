@@ -1,9 +1,7 @@
 package com.controlechamados.Interface.Persistence;
 import java.util.*;
-
 import com.controlechamados.Entity.*;
 import com.controlechamados.UseCases.Repository.*;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
