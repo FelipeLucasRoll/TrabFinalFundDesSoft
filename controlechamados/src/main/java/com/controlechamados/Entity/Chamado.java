@@ -21,7 +21,6 @@ public class Chamado {
 
 		private int idchamado = 0;
 		private Cliente cliente = null;
-		private int idcliente = 0;
 		private int idtecnico = 0;
 		private String status = "Aberto";
 		private Habilidade habilidade = new Habilidade(0,"teste",'h',false);

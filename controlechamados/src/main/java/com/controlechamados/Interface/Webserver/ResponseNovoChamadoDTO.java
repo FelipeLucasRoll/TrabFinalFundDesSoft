@@ -23,6 +23,7 @@ public class ResponseNovoChamadoDTO {
         this.prioridade = c.getPrioridade();
         this.prazoSLA = c.getPrazoLimite();
         this.habilidadecategoria = c.getHabilidade().getNome();
+        this.descricao =c.getDescricao();
     }
 
     public String getHabilidadeCategoria() { return this.habilidadecategoria;}

@@ -47,7 +47,12 @@ public class ImplRepoChamados implements RepoChamados {
         return chamados;
     }
 
-
+    @Override
+    public Chamado addChamado(Chamado c) {
+        // TODO Auto-generated method stub
+        chamados.put(c.getIdchamado(), c);
+        return c;
+    }
  
     
 }

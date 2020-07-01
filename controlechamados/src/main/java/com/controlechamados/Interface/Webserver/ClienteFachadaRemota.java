@@ -6,6 +6,7 @@ import com.controlechamados.Entity.Cliente;
 import com.controlechamados.UseCases.Services.ServicosCliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -58,6 +59,14 @@ public class ClienteFachadaRemota {
 	public Cliente getClientePeloID(@RequestParam Integer idcli) throws Exception {
 		Cliente cliente = servCliente.BuscaDadosDoCLiente(idcli);
 		return cliente;
+	}
+
+	@PostMapping("/persistenovochamado")
+	public ResponseNovoChamadoDTO postNovoChamadoDTO(@RequestParam Integer idcli, @RequestParam String habcat, @RequestParam String tit, @RequestParam String desc, @RequestParam Integer cau, @RequestParam Integer imp) throws Exception {
+		RequestNovoChamadoDTO requestDTO = new RequestNovoChamadoDTO(idcli, habcat, tit, desc, cau, imp);
+		Chamado chamadoaberto = servCliente.abrirChamado(requestDTO);
+		ResponseNovoChamadoDTO responseDTO = new ResponseNovoChamadoDTO(chamadoaberto);
+		return responseDTO;
 	}
 
 

@@ -8,6 +8,15 @@ public class RequestNovoChamadoDTO {
     private Integer causa;
     private Integer impacto;
 
+    public RequestNovoChamadoDTO(Integer idcli, String habcat, String tit, String desc, Integer cau, Integer imp){
+        this.idcliente = idcli;
+        this.titulo = tit;
+        this.habilidadecategoria = habcat;
+        this.causa = cau;
+        this.descricao = desc;
+        this.impacto = imp;
+    }
+
 
 
     public String getHabilidadeCategoria() { return this.habilidadecategoria;}
