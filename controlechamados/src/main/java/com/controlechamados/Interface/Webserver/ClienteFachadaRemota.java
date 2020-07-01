@@ -62,7 +62,7 @@ public class ClienteFachadaRemota {
 	}
 
 	@PostMapping("/persistenovochamado")
-	public ResponseNovoChamadoDTO postNovoChamadoDTO(@RequestParam Integer idcli, @RequestParam String habcat, @RequestParam String tit, @RequestParam String desc, @RequestParam Integer cau, @RequestParam Integer imp) throws Exception {
+	public ResponseNovoChamadoDTO postNovoChamadoDTO(@RequestParam Integer idcli, @RequestParam Integer habcat, @RequestParam String tit, @RequestParam String desc, @RequestParam Integer cau, @RequestParam Integer imp) throws Exception {
 		RequestNovoChamadoDTO requestDTO = new RequestNovoChamadoDTO(idcli, habcat, tit, desc, cau, imp);
 		Chamado chamadoaberto = servCliente.abrirChamado(requestDTO);
 		ResponseNovoChamadoDTO responseDTO = new ResponseNovoChamadoDTO(chamadoaberto);

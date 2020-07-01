@@ -1,6 +1,5 @@
 package com.controlechamados.UseCases.Services;
 
-import java.security.SecureRandom;
 import java.util.*;
 
 
@@ -14,6 +13,8 @@ import org.springframework.stereotype.*;
 public class ServicosCliente {
 	private RepoChamados cadChamados;
 	private RepoClientes cadClientes;
+	private RepoHabilidade cadHabil;
+	
 
 
 	@Autowired
@@ -46,8 +47,9 @@ public class ServicosCliente {
 		Cliente c = BuscaDadosDoCLiente(requestDTO.getIdCliente());
 		Random rand = new Random();
 		int idchamado = rand.nextInt(10000);
-		//String habcat = requestDTO.getHabilidadeCategoria();
-		Chamado chamadoaberto = new Chamado.Builder().chamado(idchamado).cliente(c).descricao(desc).titulo(tit).build();
+		Integer idhabcat = requestDTO.getHabilidadeCategoria();
+		Habilidade habcat = cadHabil.buscaPeloIdHabilidade(idhabcat);
+		Chamado chamadoaberto = new Chamado.Builder().chamado(idchamado).cliente(c).descricao(desc).titulo(tit).habilidade(habcat).build();
 		chamadoaberto = this.cadChamados.addChamado(chamadoaberto);
 		return chamadoaberto;
 	}

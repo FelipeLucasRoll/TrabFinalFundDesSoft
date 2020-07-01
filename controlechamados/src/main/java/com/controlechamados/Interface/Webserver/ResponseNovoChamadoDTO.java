@@ -1,7 +1,6 @@
 package com.controlechamados.Interface.Webserver;
 
 import java.util.Date;
-
 import com.controlechamados.Entity.Chamado;
 
 public class ResponseNovoChamadoDTO {
