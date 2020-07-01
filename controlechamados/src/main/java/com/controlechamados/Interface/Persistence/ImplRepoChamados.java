@@ -15,16 +15,19 @@ public class ImplRepoChamados implements RepoChamados {
     private Map<Integer,Chamado> chamados;
 
     @Autowired
-    public ImplRepoChamados(){
+    public ImplRepoChamados() throws InterruptedException {
         chamados = new HashMap<Integer, Chamado>();
+        Calendar calendar = Calendar.getInstance();
+
+
 
         Cliente teste = new Cliente(666, "ClienteTeste", "077.027.430-77", "teste@teste.com", "abc123", "Basic");
         
         for(int i = 1000 ; i < 1020 ; i++){
-            chamados.put(i,new Chamado.Builder().cliente(teste).build());
-
-
-        }
+            chamados.put(i,new Chamado.Builder().cliente(teste).chamado(i).horaAbertura(calendar.getTime()).build());
+            calendar.add(Calendar.MINUTE, 10);
+ 
+       }
     }
 
     @Override
@@ -37,6 +40,7 @@ public class ImplRepoChamados implements RepoChamados {
             }
             // ...
         }
+        System.out.println(result.values().toString());
         return result;
     }
 

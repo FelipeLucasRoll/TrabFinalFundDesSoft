@@ -6,7 +6,6 @@ import java.util.Map;
 import com.controlechamados.Entity.Chamado;
 import com.controlechamados.UseCases.Repository.*;
 //import com.controlechamados.UseCases.Repository.RepoChamados;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.*;
 
@@ -20,13 +19,14 @@ public class ServicosCliente {
 		this.cadChamados = repositorio;
 	}
 
-	public Map<Integer, Chamado> listaDeChamados(Integer idcli){
+	public Map<Integer, Chamado> listaDeChamados(Integer idcli) throws Exception {
         Map<Integer, Chamado> chamados = cadChamados.recuperaPorCliente(idcli);
 		if (chamados == null){
             throw new IllegalArgumentException("Erro Na Consulta");
-        }else{
-            return chamados;
         }
+			
+		return chamados;
+        
 	}
 	
 	public Chamado abrirChamado() {

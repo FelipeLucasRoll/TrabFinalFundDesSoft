@@ -21,14 +21,12 @@ public class ClienteFachadaRemota {
 	}
 
 	@GetMapping("/listachamados")
-	public List<Chamado> getChamadosCliente(@RequestParam Integer idcli) {
+	public List<Chamado> getChamadosCliente(@RequestParam Integer idcli) throws Exception {
 		Map<Integer, Chamado> chamadosdocliente = servCliente.listaDeChamados(idcli);
 		List<Chamado> lista = new ArrayList<Chamado>(chamadosdocliente.values());
         return lista;
 	}
 
-	//public DadosAvaliacaoCli getAvaliacao(String cpf) {
-	//	return null;
-	//}
+
 
 }
