@@ -121,9 +121,6 @@ public class Chamado {
 		this.cliente = cliente;
 	}
 
-	public int getIdcliente() {
-		return this.idcliente;
-	}
 
 	public void setIdcliente(int idcliente) {
 		this.idcliente = idcliente;
@@ -131,10 +128,6 @@ public class Chamado {
 
 	public int getIdtecnico() {
 		return this.idtecnico;
-	}
-
-	public void setIdtecnico(int idtecnico) {
-		this.idtecnico = idtecnico;
 	}
 
 	public String getStatus() {

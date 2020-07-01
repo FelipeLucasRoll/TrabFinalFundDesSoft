@@ -19,7 +19,7 @@ public class Cliente {
 	private String datanasc;
 	private String telefone;
 	private String email;
-	private String login;
+	//private String login;
 	private String senha;
 	private String plano;
 	//@OneToMany(mappedBy="cliente", targetEntity=Chamado.class)
@@ -33,14 +33,14 @@ public class Cliente {
 
 
 
-	public Cliente(int idcliente, String nome, String cpf, String datanasc, String telefone, String email, String login, String senha, String plano) {
+	public Cliente(int idcliente, String nome, String email, String senha, String plano) {
 		this.idcliente = idcliente;
 		this.nome = nome;
-		this.cpf = cpf;
-		this.datanasc = datanasc;
-		this.telefone = telefone;
+		//this.cpf = cpf;
+		//this.datanasc = null;
+		this.telefone = null;
 		this.email = email;
-		this.login = login;
+		//this.login = null;
 		this.senha = senha;
 		this.plano = plano;
 	}
@@ -105,13 +105,6 @@ public class Cliente {
 		this.email = email;
 	}
 
-	public String getLogin() {
-		return this.login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
 
 	public String getSenha() {
 		return this.senha;

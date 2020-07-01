@@ -33,22 +33,22 @@ public void testaIDChamado(){
 }
 
 
-@Test
-public void testaIDCliente(){
-    c.setIdcliente(1234);
-    int status = c.getIdcliente();
-    int s = 12334;
-    assertNotEquals(s, status);
-}
+//@Test
+//public void testaIDCliente(){
+//    c.setIdcliente(1234);
+//    int status = c.getIdcliente();
+//    int s = 12334;
+//    assertNotEquals(s, status);
+//}
 
 
-@Test
-public void testaIDTecnico(){
-    c.setIdtecnico(1234);
-    int status = c.getIdtecnico();
-    int s = 1234;
-    assertEquals(s, status);
-}
+//@Test
+//public void testaIDTecnico(){
+//    c.setIdtecnico(1234);
+//    int status = c.getIdtecnico();
+//    int s = 1234;
+//    assertEquals(s, status);
+//}
 
 
 @Test

@@ -15,7 +15,7 @@ public class ClienteTest {
  @BeforeEach
 public void setup(){
 
- c = new Cliente(0, null, null, null, null, null, null, null, null);
+ c = new Cliente(0, null, null, null, null);
 
 }
 
@@ -71,21 +71,21 @@ public void testaEmail(){
     assertNotEquals(status,s);
 }
 
-@Test
-public void testaLogin(){
-    c.setLogin("rr1234");
-    String status = c.getLogin();
-    String s = "rr1234";
-    assertEquals(status,s);
-}
+//@Test
+//public void testaLogin(){
+//    c.setLogin("rr1234");
+//    String status = c.getLogin();
+//    String s = "rr1234";
+//    assertEquals(status,s);
+//}
 
-@Test
-public void testaSenha(){
-    c.setSenha("012345");
-    String status = c.getSenha();
-    String s = "012345";
-    assertEquals(status,s);
-}
+//@Test
+//public void testaSenha(){
+//    c.setSenha("012345");
+//    String status = c.getSenha();
+//    String s = "012345";
+//    assertEquals(status,s);
+//}
 
 @Test
 public void testaPlano(){
