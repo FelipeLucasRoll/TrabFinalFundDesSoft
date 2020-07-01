@@ -5,7 +5,6 @@ import com.controlechamados.Entity.Tecnico;
 
 public interface RepoTecnicos {//extends CrudRepository<Tecnico,Integer> {
     
-     HashMap<Integer,Tecnico> Tecnicos (int idtecnico);
      HashMap<Integer,Tecnico>findall();
 
 }

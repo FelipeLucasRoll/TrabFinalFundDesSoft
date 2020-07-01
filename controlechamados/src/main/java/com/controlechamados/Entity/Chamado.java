@@ -1,24 +1,14 @@
 package com.controlechamados.Entity;
 
 import java.util.*;
-//import javax.persistence.*;
 
-
-//@Entity(name = "Chamado")
-//@Table(name = "chamados")
 public class Chamado {
 
-	//@Id
-	//@GeneratedValue(strategy=GenerationType.AUTO)
+
 	private Integer idchamado;
-    //@ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name = "idcliente")
 	private Cliente cliente;
-	private int idcliente;
 	private Integer idtecnico;
 	private String status;
-	//@ManyToOne(optional = false, fetch = FetchType.LAZY)
-	//@JoinColumn(name = "idhabilidade")
 	private Habilidade habilidade;
 	private String titulo;
 	private String descricao;
@@ -93,7 +83,6 @@ public class Chamado {
 	private Chamado(Builder builder) {
 		this.idchamado = new Integer(builder.idchamado);
 		this.cliente = builder.cliente;
-		this.idcliente = builder.idcliente;
 		this.idtecnico = new Integer(builder.idtecnico);
 		this.status = builder.status;
 		this.habilidade = builder.habilidade;
@@ -119,11 +108,6 @@ public class Chamado {
 
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
-	}
-
-
-	public void setIdcliente(int idcliente) {
-		this.idcliente = idcliente;
 	}
 
 	public int getIdtecnico() {
@@ -198,7 +182,6 @@ public class Chamado {
 	public Chamado(int idchamado, Cliente cliente, int idcliente, int idtecnico, String status, Habilidade habilidade, String descricao, Date horaAbertura, Date horaFechamento, Date prazoLimite, int prioridade) {
 		this.idchamado = idchamado;
 		this.cliente = cliente;
-		this.idcliente = idcliente;
 		this.idtecnico = idtecnico;
 		this.status = status;
 		this.habilidade = habilidade;

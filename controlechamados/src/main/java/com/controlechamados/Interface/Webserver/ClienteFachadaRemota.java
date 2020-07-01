@@ -2,6 +2,7 @@ package com.controlechamados.Interface.Webserver;
 
 import java.util.*;
 import com.controlechamados.Entity.Chamado;
+import com.controlechamados.Entity.Cliente;
 import com.controlechamados.UseCases.Services.ServicosCliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,6 +46,19 @@ public class ClienteFachadaRemota {
 		return listaDTO;
 	}
 
+
+	@GetMapping("/listaclientes")
+	public List<Cliente> getClientes() throws Exception {
+		Map<Integer, Cliente> clientes = servCliente.listaDeClientes();
+		List<Cliente> lista = new ArrayList<Cliente>(clientes.values());
+		return lista;
+	}
+
+	@GetMapping("/dadosdocliente")
+	public Cliente getClientePeloID(@RequestParam Integer idcli) throws Exception {
+		Cliente cliente = servCliente.BuscaDadosDoCLiente(idcli);
+		return cliente;
+	}
 
 
 }

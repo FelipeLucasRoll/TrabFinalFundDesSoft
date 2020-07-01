@@ -1,10 +1,8 @@
 package com.controlechamados.Interface.Persistence;
 
 import java.util.*;
-
 import com.controlechamados.Entity.*;
 import com.controlechamados.UseCases.Repository.RepoChamados;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -22,7 +20,7 @@ public class ImplRepoChamados implements RepoChamados {
 
         Cliente teste = new Cliente(666, "ClienteTeste", "teste@teste.com", "abc123", "Basic");
         
-        for(int i = 1000 ; i < 1020 ; i++){
+        for(int i = 1000 ; i < 1005 ; i++){
             chamados.put(i,new Chamado.Builder().cliente(teste).chamado(i).horaAbertura(calendar.getTime()).titulo("teste").habilidade(new Habilidade(0, "habteste", 'H', false)).build());
             calendar.add(Calendar.MINUTE, 10);
  
@@ -43,17 +41,11 @@ public class ImplRepoChamados implements RepoChamados {
         return result;
     }
 
-    //@Override
-    //public Map<Integer, Chamado> Chamados(int idchamado) {
-    //    // TODO Auto-generated method stub
-    //    return null;
-    //}
-
-    //@Override
-    //public Map<Integer, Chamado> findall() {
-    //    // TODO Auto-generated method stub
-    //    return chamados;
-    //}
+    @Override
+    public Map<Integer, Chamado> findall() {
+        // TODO Auto-generated method stub
+        return chamados;
+    }
 
 
  

@@ -5,7 +5,6 @@ import com.controlechamados.Entity.Habilidade;
 
 public interface RepoHabilidade {//extends CrudRepository<Habilidade,Integer> {
     
-     Map<Integer,Habilidade> habilidades (int idhabilidade);
      Map<Integer,Habilidade>findall();
 
 }

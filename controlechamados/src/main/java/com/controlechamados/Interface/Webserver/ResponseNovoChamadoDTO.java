@@ -1,8 +1,10 @@
 package com.controlechamados.Interface.Webserver;
+
 import java.util.Date;
+
 import com.controlechamados.Entity.Chamado;
 
-public class LinhaTabelaChamadosClienteDTO {
+public class ResponseNovoChamadoDTO {
 
     private Integer numchamado;
     private String titulo;
@@ -11,8 +13,9 @@ public class LinhaTabelaChamadosClienteDTO {
     private int prioridade;
     private Date prazoSLA;
     private String habilidadecategoria;
+    private String descricao;
 
-   public LinhaTabelaChamadosClienteDTO(Chamado c){
+   public ResponseNovoChamadoDTO(Chamado c){
         this.numchamado = new Integer(c.getIdchamado());
         this.titulo = c.getTitulo();
         this.nometecnico = "nenhum";
@@ -25,9 +28,10 @@ public class LinhaTabelaChamadosClienteDTO {
     public String getHabilidadeCategoria() { return this.habilidadecategoria;}
     public String getNomeTecnico() {return this.nometecnico;}
     public String getTitulo() {return  this.titulo;}
+    public String getDescricao() {return  this.descricao;}
     public Date getprazoSLA() {return this.prazoSLA;}
-    public Date getDataAbertura() {return this.dataabertura;}
     public Integer getNumChamado() {return this.numchamado;}
     public int getPrioridade() {return this.prioridade;}
-
+    public Date getDataAbertura() {return this.dataabertura;}
+    
 }

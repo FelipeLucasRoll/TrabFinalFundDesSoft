@@ -5,7 +5,7 @@ import com.controlechamados.Entity.Cliente;
 
 public interface RepoClientes {//extends CrudRepository<Cliente, Integer> {
     
-     Map<Integer,Cliente> Clientes (int idcliente);
+     Cliente buscaPeloIdCliente(Integer idcli);
      Map<Integer,Cliente>findall();
 
 }

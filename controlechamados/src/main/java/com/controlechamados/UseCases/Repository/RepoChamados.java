@@ -6,7 +6,6 @@ import com.controlechamados.Entity.*;
 
 public interface RepoChamados {//extends CrudRepository<Chamado, Integer> {
      Map<Integer,Chamado>  recuperaPorCliente(Integer idcli);
-     //Map<Integer,Chamado> Chamados (int idchamado);
-     //Map<Integer,Chamado>findall();
+     Map<Integer,Chamado>findall();
 
 }

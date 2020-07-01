@@ -11,8 +11,6 @@ public class TecnicoFachadaRemota {
 
 	}
 
-	public DadosChamadoTec getDadosChamado(String cpf) {
-		return null;
-	}
+
 
 }
