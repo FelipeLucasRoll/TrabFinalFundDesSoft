@@ -30,14 +30,14 @@ public class TecnicoFachadaRemota {
 	}
 
 	@GetMapping("/listachamados")
-	public List<Chamado> getChamadosCliente(@RequestParam Integer idtec) throws Exception {
+	public List<Chamado> getChamadosTecnico(@RequestParam Integer idtec) throws Exception {
 		Map<Integer, Chamado> chamadosdotecnico = servTecnico.listaDeChamados(idtec);
 		List<Chamado> lista = new ArrayList<Chamado>(chamadosdotecnico.values());
 		return lista;
 	}
 
 	@GetMapping("/listachamadosdto")
-	public List<LinhaTabelaChamadosTecnicoDTO> getChamadosClienteDTO(@RequestParam Integer idtec) throws Exception {
+	public List<LinhaTabelaChamadosTecnicoDTO> getChamadosTecnicoDTO(@RequestParam Integer idtec) throws Exception {
 		Map<Integer, Chamado> chamadosdotec = servTecnico.listaDeChamados(idtec);
 		List<Chamado> lista = new ArrayList<Chamado>(chamadosdotec.values());
 		List<LinhaTabelaChamadosTecnicoDTO> listaDTO = new ArrayList<LinhaTabelaChamadosTecnicoDTO>();
