@@ -3,23 +3,36 @@
   <center>
     <table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: collapse; border: 0px solid silver" bordercolor="#111111" width="900">
     <tr>
-      <td width="900" height="128" ><img src="imagens/logoprincipal.jpg" width="900" height="128" /></td>
+      <td width="900" height="128"><img src="imagens/logoprincipal.jpg" width="900" height="128" /></td>
+      <td width="60" height="60"><a href="index.html"><img src="imagens/exitred.png" width="35" height="35" border="0"/></a></td>
     </tr>
 
   </table>
     <table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: collapse; border: 0px solid silver" bordercolor="#111111" width="900">
+      
       <tr>
-        <td colspan="2" width="900" height="50">&nbsp;</td>
+        <td colspan="2" width="900" height="100">&nbsp;</td>
       </tr>
+      
       <tr>
-        <td width="450" height="250"><div align="center"><a href="abrirchamado.html"><img src="imagens/abrirchamado.jpg" width="150" height="166" border="0" /></a></div></td>
-        <td width="450" height="250"><div align="center"><a href="listarchamados.html"><img src="imagens/consultarchamado.jpg" alt="" width="193" height="151" border="0" /></a></div></td>
+        <td width="900"><div align="center"><button id="abrirchamados"><img src="imagens/abrirchamado.jpg" alt="" width="150" height="166" border="0" /></button></div></td>
+        <td width="900" ><div align="center"><button id="listarchamados"><img src="imagens/consultarchamado.jpg" alt="" width="193" height="151" border="0" /></button></div></td>
       </tr>
+      
       <tr>
-        <td colspan="2" width="900" height="60" align="center"><div align="right"></div><a href="index.html"><img src="imagens/exitred.png" width="60" height="60" border="0"/></a></td>
+        <td colspan="2" width="900" align="center"><label for="idcliente">Número Do Cliente</label>
+        <br>
+        <input type="text" id="idcliente" name="idcliente"></td>
+     </tr>
+     <tr>
+      <td><br></td>
+    </tr>
+     <tr>
+        <td colspan="2" width="900" height="30" align="center"><span id="listar"></span></td>
       </tr>
     </table>
   </center>
+  <script type="text/javascript" src=".\script.js"></script>
 </div>
 
 
