@@ -45,21 +45,21 @@ public void testaNome(){
 
 
 
-//@Test
-//public void testaCpf(){
-  //  c.setCpf("123");
-    //String status = c.getCpf();
-    //String s = "123";
-    //assertEquals(s, status);
-//}
+@Test
+public void testaCpf(){
+    c.setCpf("123");
+    String status = c.getCpf();
+    String s = "123";
+    assertEquals(s, status);
+}
 
-//@Test
-//public void testaDataNasc(){
-   // c.setDatanasc("01/01/1991");
-  //  String status = c.getDatanasc();
-  //  String s = "01/01/1991";
-  //  assertEquals(status,s);
-//}
+@Test
+public void testaDataNasc(){
+    c.setDatanasc("01/01/1991");
+   String status = c.getDatanasc();
+    String s = "01/01/1991";
+    assertEquals(status,s);
+}
 
 @Test
 public void testaTelefone(){
