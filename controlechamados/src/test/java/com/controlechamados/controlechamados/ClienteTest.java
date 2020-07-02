@@ -1,21 +1,27 @@
 package com.controlechamados.controlechamados;
 
+
 import com.controlechamados.Entity.Cliente;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 
+
+
 public class ClienteTest {
     private Cliente c;
+
     
  @BeforeEach
 public void setup(){
 
  c = new Cliente(0, null, null, null, null);
+
 
 }
 
