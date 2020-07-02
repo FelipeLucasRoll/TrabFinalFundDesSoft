@@ -47,7 +47,7 @@ body,td,th {
 .style28 {font-size: 20px}
 -->
 </style><body>
-<form action="" method="post" name="form3" id="form3">
+<form action="http://localhost:8080/servcliente/persistenovochamado" method="post" enctype="multipart/form-data" name="form3" id="form3">
   <p align="center" class="style2 style28">:: Abertura de Chamado ::<br>
   Sistema de Gestão de Chamados </p>
   <div align="left">
@@ -59,13 +59,13 @@ body,td,th {
 		  <tr>
              <td width="32%"><span class="style1">Login/IdCliente: </span></td>
             <td width="68%"><span class="style1">
-              <input name="idcli"  readonly="readonly" type="text" id="idcli" size="38"/>
+              <input name="idcli" type="text" id="idcli" size="38"/>
             </span></td>
           </tr>
           <tr>
             <td><span class="style1">Assunto:</span></td>
 			<td>
-			<select class="campos" name="assunto" id ="habcat">
+			<select class="campos" name="habcat" id ="habcat">
 			<option value="op" selected>Selecione uma op&ccedil;&atilde;o</option>
 			<option value="1">Computador Nao Liga</option>
 			<option value="2">Monitor Nao Liga</option>
@@ -79,7 +79,7 @@ body,td,th {
 		  <tr>
             <td><span class="style1">Motivo:</span></td>
 			<td>
-			<select class="campos" name="motivo" id="cau">
+			<select class="campos" name="cau" id="cau">
 			<option value="op" selected>Selecione uma op&ccedil;&atilde;o</option>
 			<option value="1">Duvidas Gerais Sobre o Uso</option>
 			<option value="2">Mal Funcionamento Nao Critico</option>
@@ -91,7 +91,7 @@ body,td,th {
 		  <tr>
             <td><span class="style1">Impacto:</span></td>
 			<td>
-			<select class="campos" name="impacto" id="imp">
+			<select class="campos" name="imp" id="imp">
 			<option value="op" selected>Selecione uma op&ccedil;&atilde;o</option>
 			<option value="1">Baixo</option>
 			<option value="2">Medio</option>
@@ -103,7 +103,7 @@ body,td,th {
 		  <tr>
             <td><span class="style1">Título</span></td>
             <td><span class="style1">
-              <input name="titulo" type="text" id="tit" size="38"/>
+              <input name="tit" type="text" id="tit" size="38"/>
             </span></td>
           </tr>
 		  <tr>
