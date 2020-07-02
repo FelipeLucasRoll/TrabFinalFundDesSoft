@@ -46,7 +46,12 @@ body,td,th {
 }
 .style28 {font-size: 20px}
 -->
-</style><body>
+</style>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
 <form action="http://localhost:8080/servcliente/persistenovochamado" method="post" enctype="multipart/form-data" name="form3" id="form3">
   <p align="center" class="style2 style28">:: Abertura de Chamado ::<br>
   Sistema de Gestão de Chamados </p>
@@ -113,7 +118,7 @@ body,td,th {
 			  <td></td>
            
 			    <td align="right"><span class="style1">
-              <input type="submit" name="Submit" id="Submit" value="Enviar" />
+              <input onclick="window.location.href = 'http://google.com';" type="submit" name="Submit" id="Submit" value="Enviar" />
 			  <input type="reset" name="Reset" value="Limpar" />            
 			  </span></td>
           </tr>
@@ -130,3 +135,13 @@ body,td,th {
     <br />
   </div>
 </form>
+<script type="text/javascript">
+/*$(function() {
+  $('form').submit(function(){
+    $.post('http://localhost:8080/servcliente/persistenovochamado', function() {
+      window.location = 'http://google.com';
+    });
+    return false;
+  });
+});*/
+</script>
