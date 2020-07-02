@@ -5,6 +5,7 @@ import com.controlechamados.Entity.Chamado;
 import com.controlechamados.Entity.Cliente;
 import com.controlechamados.UseCases.Services.ServicosCliente;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +30,7 @@ public class ClienteFachadaRemota {
 		return lista;
 	}
 
+	@CrossOrigin
 	@GetMapping("/listachamadosdto")
 	public List<LinhaTabelaChamadosClienteDTO> getChamadosClienteDTO(@RequestParam Integer idcli) throws Exception {
 		Map<Integer, Chamado> chamadosdocliente = servCliente.listaDeChamados(idcli);

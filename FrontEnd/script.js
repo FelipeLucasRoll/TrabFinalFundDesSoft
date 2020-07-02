@@ -43,7 +43,7 @@ document.getElementById("listarchamados").onclick = async function () {
             document.getElementById('listar').innerHTML = document.getElementById('listar').innerHTML + 
             "<p class='inner' id="+i+">"+ dados[i].titulo +spc+ " | " +spc
                                         + dados[i].prioridade +spc+ " | " +spc
-                                        + dados[i].prazosSLA +spc+ " | " +spc
+                                        + dados[i].prazoSLA +spc+ " | " +spc
                                         + dados[i].habilidadeCategoria +spc+ " | " +spc
                                         + dados[i].nomeTecnico +spc+ " | " +spc
                                         + dados[i].numChamado +spc+ " | " +spc
