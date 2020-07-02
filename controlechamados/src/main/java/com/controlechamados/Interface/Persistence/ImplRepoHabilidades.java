@@ -15,12 +15,15 @@ public class ImplRepoHabilidades implements RepoHabilidade {
     @Autowired
     public ImplRepoHabilidades() throws InterruptedException {
         listahabilidades = new HashMap<Integer, Habilidade>();
-        for(int i = 1 ; i <= 20 ; i+=4){
-            listahabilidades.put(i,new Habilidade(i  , "Hardware Not Manager", 'h', false));
-            listahabilidades.put(i+1,new Habilidade(i+1, "Hardware Manager", 'h', true));
-            listahabilidades.put(i+2,new Habilidade(i+2, "Software Not Manager", 's', false));
-            listahabilidades.put(i+3,new Habilidade(i+3, "Software Manager", 's', true));
-       }
+
+        //for(int i = 1 ; i <= 20 ; i+=4){
+            listahabilidades.put(1,new Habilidade(1  , "Computador Nao Liga", 'h'));
+            listahabilidades.put(2,new Habilidade(2, "Monitor Nao Liga", 'h'));
+            listahabilidades.put(3,new Habilidade(3, "Nao Conecta Internet", 'h'));
+            listahabilidades.put(4,new Habilidade(4, "Windows Nao Inicia", 's'));
+            listahabilidades.put(5,new Habilidade(5, "Microsoft Office Nao Abre", 's'));
+            listahabilidades.put(6,new Habilidade(6, "AntiVirus Desatualizado", 's'));
+       //}
     }
 
 

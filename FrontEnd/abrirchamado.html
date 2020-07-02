@@ -47,7 +47,7 @@ body,td,th {
 .style28 {font-size: 20px}
 -->
 </style><body>
-<form action="" method="post" name="form3" id="form3">
+<form action="http://localhost:8080/servcliente/persistenovochamado" method="post" enctype="multipart/form-data" name="form3" id="form3">
   <p align="center" class="style2 style28">:: Abertura de Chamado ::<br>
   Sistema de Gestão de Chamados </p>
   <div align="left">
@@ -57,27 +57,15 @@ body,td,th {
           </div>
           <table width="374" border="0" align="center" cellpadding="7" cellspacing="" >
 		  <tr>
-             <td width="32%"><span class="style1">Nome: </span></td>
+             <td width="32%"><span class="style1">Login/IdCliente: </span></td>
             <td width="68%"><span class="style1">
-              <input name="nome"  readonly="readonly" type="text" id="nome" size="38" value="<?php echo $nome ?>"/>
-            </span></td>
-          </tr>
-          <tr>
-            <td><span class="style1">E-mail:</span></td>
-            <td><span class="style1">
-              <input name="email"  readonly="readonly"  type="text" id="email" size="38" value="<?php echo $email ?>" />
-            </span></td>
-          </tr>
-          <tr>
-            <td><span class="style1">Celular:</span></td>
-            <td><span class="style1">
-              <input name="celular"  readonly="readonly" type="text" id="celular" size="38" value="<?php echo $celular ?>" />
+              <input name="idcli" type="text" id="idcli" size="38"/>
             </span></td>
           </tr>
           <tr>
             <td><span class="style1">Assunto:</span></td>
 			<td>
-			<select class="campos" name="assunto">
+			<select class="campos" name="habcat" id ="habcat">
 			<option value="op" selected>Selecione uma op&ccedil;&atilde;o</option>
 			<option value="1">Computador Nao Liga</option>
 			<option value="2">Monitor Nao Liga</option>
@@ -91,7 +79,7 @@ body,td,th {
 		  <tr>
             <td><span class="style1">Motivo:</span></td>
 			<td>
-			<select class="campos" name="motivo">
+			<select class="campos" name="cau" id="cau">
 			<option value="op" selected>Selecione uma op&ccedil;&atilde;o</option>
 			<option value="1">Duvidas Gerais Sobre o Uso</option>
 			<option value="2">Mal Funcionamento Nao Critico</option>
@@ -103,7 +91,7 @@ body,td,th {
 		  <tr>
             <td><span class="style1">Impacto:</span></td>
 			<td>
-			<select class="campos" name="impacto">
+			<select class="campos" name="imp" id="imp">
 			<option value="op" selected>Selecione uma op&ccedil;&atilde;o</option>
 			<option value="1">Baixo</option>
 			<option value="2">Medio</option>
@@ -113,8 +101,14 @@ body,td,th {
 			</td>
           </tr>
 		  <tr>
-			  <td><span class="style1">Mensagem:</span></td>
-			  <td><textarea class="campos" name="mensagem" cols="45" rows="7"></textarea></td>
+            <td><span class="style1">Título</span></td>
+            <td><span class="style1">
+              <input name="tit" type="text" id="tit" size="38"/>
+            </span></td>
+          </tr>
+		  <tr>
+			  <td><span class="style1">Descrição:</span></td>
+			  <td><textarea class="campos" name="desc" id="desc" cols="45" rows="7"></textarea></td>
 		  </tr>
 			  <td></td>
            

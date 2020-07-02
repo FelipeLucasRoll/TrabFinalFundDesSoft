@@ -37,13 +37,13 @@ public class TecnicoFachadaRemota {
 	}
 
 	@GetMapping("/listachamadosdto")
-	public List<LinhaTabelaChamadosClienteDTO> getChamadosClienteDTO(@RequestParam Integer idtec) throws Exception {
-		Map<Integer, Chamado> chamadosdocliente = servTecnico.listaDeChamados(idtec);
-		List<Chamado> lista = new ArrayList<Chamado>(chamadosdocliente.values());
-		List<LinhaTabelaChamadosClienteDTO> listaDTO = new ArrayList<LinhaTabelaChamadosClienteDTO>();
+	public List<LinhaTabelaChamadosTecnicoDTO> getChamadosClienteDTO(@RequestParam Integer idtec) throws Exception {
+		Map<Integer, Chamado> chamadosdotec = servTecnico.listaDeChamados(idtec);
+		List<Chamado> lista = new ArrayList<Chamado>(chamadosdotec.values());
+		List<LinhaTabelaChamadosTecnicoDTO> listaDTO = new ArrayList<LinhaTabelaChamadosTecnicoDTO>();
 		for (int i = 0 ; i< lista.size();i++){
-			LinhaTabelaChamadosClienteDTO lin = new LinhaTabelaChamadosClienteDTO(lista.get(i));
-			listaDTO.add(lin);
+			//LinhaTabelaChamadosTecnicoDTO lin = new LinhaTabelaChamadosClienteDTO(lista.get(i));
+			//listaDTO.add(lin);
 		}
 		return listaDTO;
 	}

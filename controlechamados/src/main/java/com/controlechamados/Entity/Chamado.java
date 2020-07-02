@@ -23,7 +23,7 @@ public class Chamado {
 		private Cliente cliente = null;
 		private int idtecnico = 0;
 		private String status = "Aberto";
-		private Habilidade habilidade = new Habilidade(0,"teste",'h',false);
+		private Habilidade habilidade = new Habilidade(0,"teste",'h');
 		private String titulo;
 		private String descricao = "";
 		private Date horaabertura = new Date();
@@ -79,7 +79,7 @@ public class Chamado {
 
 	}	
 
-	private Chamado(Builder builder) {
+	public Chamado(Builder builder) {
 		this.idchamado = new Integer(builder.idchamado);
 		this.cliente = builder.cliente;
 		this.idtecnico = new Integer(builder.idtecnico);
@@ -100,6 +100,10 @@ public class Chamado {
 	public void setIdchamado(int idchamado) {
 		this.idchamado = idchamado;
 	}
+	public void setIdtecnico(Integer idtecnico) {
+		this.idtecnico = idtecnico;
+	}
+
 
 	public Cliente getCliente() {
 		return this.cliente;
@@ -178,6 +182,7 @@ public class Chamado {
 		this.habilidade = habilidade;
 	}
 
+	/*
 	public Chamado(int idchamado, Cliente cliente, int idcliente, int idtecnico, String status, Habilidade habilidade, String descricao, Date horaAbertura, Date horaFechamento, Date prazoLimite, int prioridade) {
 		this.idchamado = idchamado;
 		this.cliente = cliente;
@@ -190,5 +195,6 @@ public class Chamado {
 		this.prazoLimite = prazoLimite;
 		this.prioridade = prioridade;
 	}
+	*/
 
 }
