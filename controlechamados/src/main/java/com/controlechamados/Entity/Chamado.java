@@ -23,7 +23,7 @@ public class Chamado {
 		private Cliente cliente = null;
 		private int idtecnico = 0;
 		private String status = "Aberto";
-		private Habilidade habilidade = new Habilidade(0,"teste",'h',false);
+		private Habilidade habilidade = new Habilidade(0,"teste",'h');
 		private String titulo;
 		private String descricao = "";
 		private Date horaabertura = new Date();

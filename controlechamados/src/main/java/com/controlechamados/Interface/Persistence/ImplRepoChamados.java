@@ -21,7 +21,7 @@ public class ImplRepoChamados implements RepoChamados {
         Cliente teste = new Cliente(666, "ClienteTeste", "teste@teste.com", "abc123", "Basic");
         
         for(int i = 1000 ; i < 1005 ; i++){
-            Chamado newchamado = new Chamado.Builder().cliente(teste).chamado(i).horaAbertura(calendar.getTime()).titulo("teste").habilidade(new Habilidade(0, "habteste", 'H', false)).build(); 
+            Chamado newchamado = new Chamado.Builder().cliente(teste).chamado(i).horaAbertura(calendar.getTime()).titulo("teste").habilidade(new Habilidade(0, "habteste", 'H')).build(); 
             chamados.put(i,newchamado);
             teste.addChamadoNaListaDoCliente(newchamado);
             calendar.add(Calendar.MINUTE, 10);

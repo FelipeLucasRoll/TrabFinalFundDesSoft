@@ -17,7 +17,7 @@ public class HabilidadeTest {
     @BeforeEach
     public void setup(){
     
-     h = new Habilidade(0, null, '0', false);
+     h = new Habilidade(0, null, '0');
     
     }
 
@@ -47,13 +47,7 @@ public class HabilidadeTest {
         assertEquals(s, status);
     }
     
-    @Test
-    public void testaManager(){
-        
-        boolean status = true;
-        h.setManager(status);
-        assertTrue(status);
-    }
+
 
 
 }
