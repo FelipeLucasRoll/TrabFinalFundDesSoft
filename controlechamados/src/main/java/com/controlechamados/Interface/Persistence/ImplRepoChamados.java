@@ -21,7 +21,9 @@ public class ImplRepoChamados implements RepoChamados {
         Cliente teste = new Cliente(666, "ClienteTeste", "teste@teste.com", "abc123", "Basic");
         
         for(int i = 1000 ; i < 1005 ; i++){
-            chamados.put(i,new Chamado.Builder().cliente(teste).chamado(i).horaAbertura(calendar.getTime()).titulo("teste").habilidade(new Habilidade(0, "habteste", 'H', false)).build());
+            Chamado newchamado = new Chamado.Builder().cliente(teste).chamado(i).horaAbertura(calendar.getTime()).titulo("teste").habilidade(new Habilidade(0, "habteste", 'H', false)).build(); 
+            chamados.put(i,newchamado);
+            teste.addChamadoNaListaDoCliente(newchamado);
             calendar.add(Calendar.MINUTE, 10);
  
        }
@@ -48,9 +50,10 @@ public class ImplRepoChamados implements RepoChamados {
     }
 
     @Override
-    public Chamado addChamado(Chamado c) {
+    public Chamado addChamado(Cliente cli, Chamado c) {
         // TODO Auto-generated method stub
         chamados.put(c.getIdchamado(), c);
+//        cli.addChamadoNaListaDoCliente(c);
         return c;
     }
  

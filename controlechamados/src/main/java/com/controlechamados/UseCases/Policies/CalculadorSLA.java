@@ -3,9 +3,9 @@ package com.controlechamados.UseCases.Policies;
 import java.util.Date;
 import com.controlechamados.Entity.Chamado;
 
-public interface InterfaceCalculaSLA{
+public interface CalculadorSLA{
     
-public Date addDias(int dias);
+public Date addDias(Date datainicial, int dias);
 
 public Date getTime();
 

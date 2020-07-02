@@ -13,10 +13,10 @@ public abstract class SuperCalculadorSLA {
         
     }
 
-    public Date addDias(int dias){
-        Date data = new Date();
-        data = new Date(data.getTime() + TimeUnit.DAYS.toMillis(dias));
-        return data;
+    public Date addDias(Date datainicial, int dias){
+ 
+        Date datafinal = new Date(datainicial.getTime() + TimeUnit.DAYS.toMillis(dias));
+        return datafinal;
     }
 
     public Date getTime(){

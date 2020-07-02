@@ -28,7 +28,7 @@ public class Cliente {
     //    cascade = CascadeType.ALL,
     //    orphanRemoval = true
 	//)
-    private List<Chamado> chamados;
+    private ArrayList<Chamado> chamados;
 
 
 
@@ -43,17 +43,18 @@ public class Cliente {
 		//this.login = null;
 		this.senha = senha;
 		this.plano = plano;
+		this.chamados = new ArrayList<Chamado>();
 	}
 
-	public List<Chamado> addChamadoNaListaDoCliente(Chamado chamado){
-		List<Chamado> lista = getChamados();
+	public ArrayList<Chamado> addChamadoNaListaDoCliente(Chamado chamado){
+		ArrayList<Chamado> lista = getChamados();
 		lista.add(chamado);
 		chamado.setCliente(this);
 		return lista;
 	}
 
 	
-	private List<Chamado> getChamados() {
+	public ArrayList<Chamado> getChamados() {
 		return chamados;
 	}
 

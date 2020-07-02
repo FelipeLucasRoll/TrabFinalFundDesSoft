@@ -1,13 +1,14 @@
 package com.controlechamados.UseCases.Services;
-
 import java.util.*;
 
 
 import com.controlechamados.Entity.*;
 import com.controlechamados.Interface.Webserver.RequestNovoChamadoDTO;
 import com.controlechamados.UseCases.Repository.*;
+import com.controlechamados.UseCases.Policies.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.*;
+
 
 @Service
 public class ServicosCliente {
@@ -44,7 +45,16 @@ public class ServicosCliente {
 		Integer idhabcat = requestDTO.getHabilidadeCategoria();
 		Habilidade habcat = cadHabil.buscaPeloIdHabilidade(idhabcat);
 		Chamado chamadoaberto = new Chamado.Builder().chamado(idchamado).cliente(c).descricao(desc).titulo(tit).habilidade(habcat).build();//.build();// .habilidade(habcat).build(); 
-		chamadoaberto = this.cadChamados.addChamado(chamadoaberto);
+		chamadoaberto = this.cadChamados.addChamado(c, chamadoaberto);
+		c.addChamadoNaListaDoCliente(chamadoaberto);
+		CalculadorSLA calc;
+		if(c.getChamados().size() <= 10){
+			calc = new CalculadorSLAPorPrioridade();
+		}
+		else{
+			calc = new CalculadorSLAPorPlano();
+		}
+			chamadoaberto = calc.calculaSLA(chamadoaberto);
 		return chamadoaberto;
 	}
 
