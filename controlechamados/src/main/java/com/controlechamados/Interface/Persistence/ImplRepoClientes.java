@@ -13,15 +13,15 @@ public class ImplRepoClientes implements RepoClientes  {
     @Autowired
     public ImplRepoClientes() throws InterruptedException {
         clientes = new HashMap<Integer, Cliente>();
-        Calendar calendar = Calendar.getInstance();
+        
 
         for(int i = 1 ; i < 15 ; i++){
             clientes.put(i,new Cliente(i, "ClienteNumero "+i+" ", "teste@teste.com", "abc"+i+i+i, "Basic"));
-            calendar.add(Calendar.MINUTE, 10);
+            
        }
         for(int i = 15 ; i < 25 ; i++){
             clientes.put(i,new Cliente(i, "ClienteNumero "+i+" ", "teste@teste.com", "abc"+i+i+i, "Premium"));
-            calendar.add(Calendar.MINUTE, 10);
+            
        }
 
     }

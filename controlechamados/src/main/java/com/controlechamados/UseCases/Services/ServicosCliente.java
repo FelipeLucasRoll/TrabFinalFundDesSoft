@@ -13,15 +13,15 @@ import org.springframework.stereotype.*;
 public class ServicosCliente {
 	private RepoChamados cadChamados;
 	private RepoClientes cadClientes;
-	//private RepoHabilidade cadHabil;
+	private RepoHabilidade cadHabil;
 	
 
 
 	@Autowired
-	public ServicosCliente(RepoChamados repochamados,RepoClientes repoclientes){//, RepoHabilidade repohabil){
+	public ServicosCliente(RepoChamados repochamados,RepoClientes repoclientes, RepoHabilidade repohabil){
 		this.cadChamados = repochamados;
 		this.cadClientes = repoclientes;
-		//this.cadHabil = repohabil;
+		this.cadHabil = repohabil;
 	}
 
 	public Map<Integer, Chamado> listaDeChamados(Integer idcli) throws Exception {
@@ -42,8 +42,8 @@ public class ServicosCliente {
 		Random rand = new Random();
 		int idchamado = rand.nextInt(10000);
 		Integer idhabcat = requestDTO.getHabilidadeCategoria();
-		//Habilidade habcat = cadHabil.buscaPeloIdHabilidade(idhabcat);
-		Chamado chamadoaberto = new Chamado.Builder().chamado(idchamado).cliente(c).descricao(desc).titulo(tit).build();// habilidade(habcat).build(); //.build();//
+		Habilidade habcat = cadHabil.buscaPeloIdHabilidade(idhabcat);
+		Chamado chamadoaberto = new Chamado.Builder().chamado(idchamado).cliente(c).descricao(desc).titulo(tit).habilidade(habcat).build();//.build();// .habilidade(habcat).build(); 
 		chamadoaberto = this.cadChamados.addChamado(chamadoaberto);
 		return chamadoaberto;
 	}

@@ -17,9 +17,9 @@ public class ImplRepoHabilidades implements RepoHabilidade {
         listahabilidades = new HashMap<Integer, Habilidade>();
         for(int i = 1 ; i <= 20 ; i+=4){
             listahabilidades.put(i,new Habilidade(i  , "Hardware Not Manager", 'h', false));
-            listahabilidades.put(i,new Habilidade(i+1, "Hardware Manager", 'h', true));
-            listahabilidades.put(i,new Habilidade(i+2, "Software Not Manager", 's', false));
-            listahabilidades.put(i,new Habilidade(i+3, "Software Manager", 's', true));
+            listahabilidades.put(i+1,new Habilidade(i+1, "Hardware Manager", 'h', true));
+            listahabilidades.put(i+2,new Habilidade(i+2, "Software Not Manager", 's', false));
+            listahabilidades.put(i+3,new Habilidade(i+3, "Software Manager", 's', true));
        }
     }
 
