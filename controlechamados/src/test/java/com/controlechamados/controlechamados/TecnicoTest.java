@@ -2,7 +2,6 @@ package com.controlechamados.controlechamados;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
@@ -17,14 +16,14 @@ import org.junit.jupiter.api.Test;
 public class TecnicoTest {
     private Tecnico t;
     private List<Habilidade> habilidades;
-    private Habilidade h;
+    //private Habilidade h;
 
     @BeforeEach
     public void setup() {
 
         t = new Tecnico(0, null, null, null, null, habilidades, 0);
         habilidades = new ArrayList<Habilidade>();
-        h = new Habilidade(10, "Limpeza", 'H');
+       // h = new Habilidade(10, "Limpeza", 'H');
     }
 
     @Test
