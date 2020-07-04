@@ -40,6 +40,8 @@ document.getElementById("listarchamados").onclick = async function () {
 
         for(var i = 0;i < dados.length; i++)
         {
+            //var date = new Date(dados[i].prazoSLA)
+            //var date = date.prototype.toDateString();
             document.getElementById('listar').innerHTML = document.getElementById('listar').innerHTML + 
             "<p class='inner' id="+i+">"+ dados[i].titulo +spc+ " | " +spc
                                         + dados[i].prioridade +spc+ " | " +spc
